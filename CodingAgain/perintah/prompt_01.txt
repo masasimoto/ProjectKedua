@@ -1,0 +1,11 @@
+udah lah lupakan dan rombak semuanya bangsat! gua mau kembali ajah ke index.html yang lama biar semua tampilanya sama. dan untuk backend harus tetap terintegarsi dengan sangat advance.
+
+kemudian gua mau untuk avatar AI pakai logo svg yang ada di dalam kode index.html yang lama yang sudah saya siapkan dan untuk ukuranya disesuaikan sekaligus buatkan juga  animasi loading logo ukuran-ya kecil dengan animasi menggambar logo secara terus menerus dengan advance dan super halus biar sama dengan perplexity ai yang asli, yang kemudian akan hilang semua logo dan animasinya setelah pesan di tampikan, dan saya mau font user gradient tipis halus, super besar dan tebal. dan saya mau percakapanya harus benar benar sama dengan gaya perplexity AI.
+
+kemudian area percakapan harus ada di atas sesuai layar dan beri jarak agar tidak terlalu mepet ke atas layar, kemudian tempat buat saya masukin pesan ke AI akan bergeser ke bawah dan akan selalu tetap terlihat di layar, kemudian hilangkan logo besar dan tombol/fungsi aksi cepatnya dan saya mau area percakapan dan tempat buat masukin pesan ke ai posisi-nya presisi ditengah sesuai layar dan menjadi agak lebar lagi area percakapan dan tempat buat masukin pesan ke ai-nya, serta hilangkan scrool bar-nya tapi user masih bisa scrool dengan aman dan nyaman.
+
+dan saya mau pesan dari yang dihasilkan user dan AI wajib menggunakan full markdown dan highlight, pakai library yang sudah mendukung semuanya, kemudian saya mau ketika mengetik pesan maka tombol voice mode akan berubah jadi fungsi kirim dan ketika percakapan sudah mulai percakapan maka ganti lagi dengan icon kirim lain-nya yang tersedia di dalam kode index.html yang lama.
+
+kemudian jangan ubah-ubah tampilan awal sama sekali, dan ini semua akan aktif hanya pada saat percakapan user dengan AI saja, pokonya dan intinya gua mau semuanya harus sama 100% dengan perplexity AI.
+
+kan saya sudah bilang sama kamu "manfaatkan semua kode yang tersedia dan sudah saya siapkan dengan maksimal"! masa kamu gapaham-paham. pakai logikanya dengan maksimal!.  dan jikalau ada kode yang perlu ditambahkan/disesuaikan, buat filenya secara terpisah tapi tetap terintegrasi.

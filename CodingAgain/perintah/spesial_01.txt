@@ -1,0 +1,14 @@
+ini adalah kode frontend saya, nah sekarang saya mau frontend yang saya miiki terintegrasi full dengan backend dan saya mau pakai model AI gemini tapi dengan kemampuan yang sama full dengan perplexity AI, biar sesuai dengan frontend yang sudah saya buat.
+
+buat kode - kodenya menjadi sebagai berikut :
+
+1. Separation of Concerns (SoC) = Pisahkan kode berdasarkan tanggung jawab (responsibility).
+2. Single Responsibility Principle (SRP) = Satu file/class/module hanya punya 1 tanggung jawab utama. Jangan bikin file "serbaguna" yang isinya campur aduk.
+3. Modularization = Pecah kode panjang jadi modul kecil.
+4. Jangan Duplikasi Kode (DRY - Don’t Repeat Yourself) = Kalau ada logika yang sama diulang, bikin fungsi/helper sendiri.
+5. Naming Convention yang Konsisten
+6. Documentasi = Komentar seperlunya. Buat README.md yang jelas tentang struktur & cara jalanin project.
+
+ingat kode tidak boleh ada yang dirubah/kurangi/dihilangkan, tulis dan pisahkan sesuai dengan kode yang telah saya kasih dan tetap terintegrasi dengan baik dan benar.
+
+kemudian jikalau sudah beritahu saya dengan detail bagian-bagian kode mana sampai mana saja yang harus saya pindahkan. sekaligus buatkan juga skrip otomatis untuk buat struktur folder dan file nya buat saya jalankan secara otomatis di poweshell!.

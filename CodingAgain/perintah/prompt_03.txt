@@ -1,0 +1,2 @@
+ini adalah kode frontend saya, nah sekarang gimana caranya frontend yang saya miiki terintegrasi dengan backend? dan saya mau pakai model AI gemini.
+jadi bagian kode mana yang perlu disesuaikan tanpa saya mengubah-ubah kode frontend yang sudah ada karena saya takut kode yang saya buat rusak!.

@@ -1,0 +1,13 @@
+okeyy, kamu harus super fokus, pakai logika maksimal dan manfaatkan semua kode yang tersedia dan sudah saya siapkan dengan maksimal serta pahami poin-poin ini sebagai berikut:
+
+1. animasi loading logo ukuran-ya kecil dengan animasi menggambar logo secara terus menerus dengan advance dan super halus biar sama dengan perplexity ai yang asli, yang kemudian akan hilang semua logo dan animasinya setelah pesan di tampikan, dan saya mau font user gradient tipis halus, super besar dan tebal serta ada garis pemisah antara user dengan AI dan sesuaikan jaraknya.
+
+2. kemudian saya mau area percakapan dan tempat buat masukin pesan ke ai posisi-nya presisi ditengah sesuai layar dan menjadi agak lebar lagi area percakapan dan tempat buat masukin pesan ke ai-nya, serta hilangkan scrool bar-nya tapi user masih bisa scrool dengan aman dan nyaman.
+
+3. kemudian area percakapan harus ada di atas sesuai layar dan beri jarak agar tidak terlalu mepet ke atas layar, kemudian tempat buat saya masukin pesan ke AI akan bergeser ke bawah dan akan selalu tetap terlihat di layar, kemudian hilangkan logo besar dan tombol/fungsi aksi cepatnya.
+
+4. kemudian saya mau ketika mengetik pesan maka tombol voice mode akan berubah jadi fungsi kirim dan ketika percakapan sudah mulai percakapan maka ganti lagi dengan icon kirim lain-nya yang tersedia dikode file frontend saya.
+
+5. saya gamau ada perubahan pada file frontend yang sudah saya buat, dan jikalau ada kode yang perlu ditambahkan atau disesuaikan buat filenya secara terpisah tapi tetap terintegrasi, dan saya hanya mau kamu manfaatkan kode - kode frontend yang sudah saya buat dengan total dan maksimal.
+
+6. kan saya sudah bilang sama kamu "manfaatkan semua kode yang tersedia dan sudah saya siapkan dengan maksimal"! masa kamu gapaham-paham. pakai logikanya dengan maksimal!. intinya saya mau benar - benar sama dengan perplexity AI yang asli maka dari itu PAHAMI, DALAMI & PASTIKAN TIDAK ADA YANG SALAH & SEMUA-NYA BENAR.

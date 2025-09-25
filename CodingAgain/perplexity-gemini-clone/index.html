@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" data-color-scheme="dark">
+  <head>
+    <meta name="version" content="6e79cdf" />
+    <meta name="min-version" content="1758668731161" />
+
+    <meta charset="utf-8" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCF9" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#100E12" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perplexity</title>
+
+    <link rel="stylesheet" href="chat_style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <link rel="canonical" href="https://www.perplexity.ai" />
+    <meta name="description" content="Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question." />
+    <meta property="og:title" content="Perplexity" />
+    <meta property="og:description" content="Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question." />
+    <meta property="og:url" content="https://www.perplexity.ai/" />
+    <meta property="og:site_name" content="Perplexity AI" />
+    <meta property="og:image" content="https://ppl-ai-public.s3.amazonaws.com/static/img/pplx-default-preview.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@perplexity_ai" />
+    <meta name="twitter:title" content="Perplexity" />
+    <meta name="twitter:description" content="Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question." />
+    <meta name="twitter:image" content="https://ppl-ai-public.s3.amazonaws.com/static/img/pplx-default-preview.png" />
+    <script src="https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.PLtFj_-5DjQ.O/m=picker/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-J85zQk73PCqZPyWTydWEIq3_4KA/cb=gapi.loaded_0?le=scs,fedcm_migration_mod" async=""></script>
+    <script type="module" crossorigin="" src="https://pplx-next-static-public.perplexity.ai/_spa/assets/vite-D9Bl2idj.js"></script>
+    <script type="module" crossorigin="" src="https://pplx-next-static-public.perplexity.ai/_spa/assets/vendors-D80jw9f5.js"></script>
+    <script type="module" crossorigin="" src="https://pplx-next-static-public.perplexity.ai/_spa/assets/platform-Bj4UqCpu.js"></script>
+    <script type="module" crossorigin="" src="https://pplx-next-static-public.perplexity.ai/_spa/assets/icons-BWoLQMQ_.js"></script>
+    <script type="module" crossorigin="" src="https://pplx-next-static-public.perplexity.ai/_spa/assets/i18n-B9c4qKoa.js"></script>
+    <script type="module" crossorigin="" src="https://pplx-next-static-public.perplexity.ai/_spa/assets/index-klyjGgYI.js"></script>
+    <link rel="stylesheet" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/index-jiFJqU4v.css" />
+    <script src="https://js.stripe.com/v3"></script>
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/LexicalHistoryPlugin.prod-Infxko77.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/vendors-D80jw9f5.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/vite-D9Bl2idj.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/platform-Bj4UqCpu.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/icons-BWoLQMQ_.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/i18n-B9c4qKoa.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/LexicalClearEditorPlugin.prod-C7FeA-AW.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/LexicalOnChangePlugin.prod-D2HlnpW7.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/LexicalEditorRefPlugin.prod-CGbDwwl9.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/AutoLinkPlugin-Baa58hG7.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/LinkPlugin-CXE7RQm1.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/LexicalMarkdownShortcutPlugin.prod-D0jDRaBC.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/cdn-X4pfrvmo.js" />
+    <link rel="modulepreload" as="script" crossorigin="" href="https://pplx-next-static-public.perplexity.ai/_spa/assets/index-BHzD4wOK.js" />
+    <style id="googleidentityservice_button_styles">
+      .qJTHM {
+        -webkit-user-select: none;
+        color: #202124;
+        direction: ltr;
+        -webkit-touch-callout: none;
+        font-family: "Roboto-Regular", arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 400;
+        margin: 0;
+        overflow: hidden;
+        -webkit-text-size-adjust: 100%;
+      }
+      .ynRLnc {
+        left: -9999px;
+        position: absolute;
+        top: -9999px;
+      }
+      .L6cTce {
+        display: none;
+      }
+      .bltWBb {
+        overflow-wrap: break-word;
+        word-break: break-word;
+      }
+      .hSRGPd {
+        color: #1a73e8;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .Bz112c-W3lGp {
+        height: 16px;
+        width: 16px;
+      }
+      .Bz112c-E3DyYd {
+        height: 20px;
+        width: 20px;
+      }
+      .Bz112c-r9oPif {
+        height: 24px;
+        width: 24px;
+      }
+      .Bz112c-u2z5K {
+        height: 36px;
+        width: 36px;
+      }
+      .Bz112c-uaxL4e {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+      }
+      .LgbsSe-Bz112c {
+        display: block;
+      }
+      .S9gUrf-YoZ4jf,
+      .S9gUrf-YoZ4jf * {
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+      .fFW7wc-ibnC6b > .aZ2wEe > div {
+        border-color: #4285f4;
+      }
+      .P1ekSe-ZMv3u {
+        -webkit-transition: height linear 200ms;
+        -webkit-transition: height linear 200ms;
+        transition: height linear 200ms;
+      }
+      .P1ekSe-ZMv3u > div:nth-child(1) {
+        background-color: #1a73e8 !important;
+        -webkit-transition: width linear 300ms;
+        -webkit-transition: width linear 300ms;
+        transition: width linear 300ms;
+      }
+      .P1ekSe-ZMv3u > div:nth-child(2),
+      .P1ekSe-ZMv3u > div:nth-child(3) {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), linear-gradient(to right, #1a73e8, #1a73e8) !important;
+      }
+      .haAclf {
+        display: inline-block;
+      }
+      .nsm7Bb-HzV7m-LgbsSe {
+        border-radius: 4px;
+        box-sizing: border-box;
+        -webkit-transition: background-color 0.218s, border-color 0.218s;
+        transition: background-color 0.218s, border-color 0.218s;
+        -webkit-user-select: none;
+        -webkit-appearance: none;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #dadce0;
+        color: #3c4043;
+        cursor: pointer;
+        font-family: "Google Sans", arial, sans-serif;
+        font-size: 14px;
+        height: 40px;
+        letter-spacing: 0.25px;
+        outline: none;
+        overflow: hidden;
+        padding: 0 12px;
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: auto;
+      }
+      @media screen and (-ms-high-contrast: active) {
+        .nsm7Bb-HzV7m-LgbsSe {
+          border: 2px solid windowText;
+          color: windowText;
+        }
+      }
+      @media screen and (preferes-contrast: more) {
+        .nsm7Bb-HzV7m-LgbsSe {
+          color: #000;
+        }
+      }
+      .nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe {
+        font-size: 14px;
+        height: 32px;
+        letter-spacing: 0.25px;
+        padding: 0 10px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe {
+        font-size: 11px;
+        height: 20px;
+        letter-spacing: 0.3px;
+        padding: 0 8px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe {
+        padding: 0;
+        width: 40px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe {
+        width: 32px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe {
+        width: 20px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK {
+        border-radius: 20px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe {
+        border-radius: 16px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe {
+        border-radius: 10px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc {
+        border: none;
+        color: #fff;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc {
+        background-color: #1a73e8;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc {
+        background-color: #202124;
+        color: #e8eaed;
+      }
+      @media screen and (prefers-contrast: more) {
+        .nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc {
+          color: #fff;
+        }
+      }
+      .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        height: 18px;
+        margin-right: 8px;
+        min-width: 18px;
+        width: 18px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        height: 14px;
+        min-width: 14px;
+        width: 14px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        height: 10px;
+        min-width: 10px;
+        width: 10px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        margin-left: 8px;
+        margin-right: -4px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        margin: 0;
+        padding: 10px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        padding: 8px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        padding: 4px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        background-color: #fff;
+        height: 36px;
+        margin-left: -10px;
+        margin-right: 12px;
+        min-width: 36px;
+        width: 36px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,
+      .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        margin: 0;
+        padding: 0;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        height: 28px;
+        margin-left: -8px;
+        margin-right: 10px;
+        min-width: 28px;
+        width: 28px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        height: 16px;
+        margin-left: -6px;
+        margin-right: 8px;
+        min-width: 16px;
+        width: 16px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        border-radius: 3px;
+        margin-left: 2px;
+        margin-right: 0;
+        padding: 0;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        border-radius: 18px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        border-radius: 14px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        border-radius: 8px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-flex-direction: row;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        -webkit-box-pack: space-between;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        height: 100%;
+        position: relative;
+        width: 100%;
+      }
+      .nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+      }
+      .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId {
+        -webkit-flex-grow: 1;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        font-family: "Google Sans", arial, sans-serif;
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: top;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId {
+        font-weight: 300;
+      }
+      .nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId {
+        -webkit-flex-grow: 0;
+        -webkit-box-flex: 0;
+        flex-grow: 0;
+      }
+      .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe {
+        -webkit-transition: background-color 0.218s;
+        transition: background-color 0.218s;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .nsm7Bb-HzV7m-LgbsSe:hover,
+      .nsm7Bb-HzV7m-LgbsSe:focus {
+        box-shadow: none;
+        border-color: #d2e3fc;
+        outline: none;
+      }
+      .nsm7Bb-HzV7m-LgbsSe:focus-within {
+        outline: 2px solid #00639b;
+        border-color: transparent;
+      }
+      .nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe {
+        background: rgba(66, 133, 244, 0.08);
+      }
+      .nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,
+      .nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe {
+        background: rgba(66, 133, 244, 0.1);
+      }
+      .nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe {
+        background: rgba(255, 255, 255, 0.24);
+      }
+      .nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,
+      .nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe {
+        background: rgba(255, 255, 255, 0.32);
+      }
+      .nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY {
+        border-radius: 50%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        height: 20px;
+        margin-left: -4px;
+        margin-right: 8px;
+        min-width: 20px;
+        width: 20px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId {
+        font-family: "Roboto";
+        font-size: 12px;
+        text-align: left;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf,
+      .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        align-items: center;
+        color: #5f6368;
+        fill: #5f6368;
+        font-size: 11px;
+        font-weight: 400;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff {
+        color: #e8eaed;
+        fill: #e8eaed;
+      }
+      @media screen and (prefers-contrast: more) {
+        .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff,
+        .nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff {
+          color: #000;
+          fill: #000;
+        }
+      }
+      .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c {
+        height: 18px;
+        margin: -3px -3px -3px 2px;
+        min-width: 18px;
+        width: 18px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        margin-left: 12px;
+        margin-right: -10px;
+      }
+      .nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        border-radius: 18px;
+      }
+      .L5Fo6c-sM5MNb {
+        border: 0;
+        display: block;
+        left: 0;
+        position: relative;
+        top: 0;
+      }
+      .L5Fo6c-bF1uUb {
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .L5Fo6c-bF1uUb:focus {
+        border: none;
+        outline: none;
+      }
+      sentinel {
+      }
+    </style>
+    <script src="https://www.dubcdn.com/analytics/script.js" defer="" data-sdkn="@dub/analytics" data-sdkv="0.0.30" data-domains='{"refer":"pplx.ai"}' data-cookie-options='{"expiresInDays":90}'></script>
+    <style>
+      .picker-dialog-frame {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        overflow: hidden;
+      }
+      .picker-dialog-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        z-index: 1000;
+      }
+      .picker-dialog {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        border: 1px solid #acacac;
+        width: auto;
+        padding: 0;
+        z-index: 1001;
+        overflow: auto;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      }
+      .picker-dialog-content {
+        height: 100%;
+        font-size: 0;
+        padding: 0;
+      }
+      .picker-dialog-buttons,
+      .picker-dialog-title {
+        display: none;
+      }
+    </style>
+    <script src="https://www.googletagmanager.com/gtag/js?id=AW-11209402154" async=""></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11209402154/?random=1758714813704&amp;cv=11&amp;fst=1758714813704&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be59m1h1v9199161533za200zd9199161533xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710&amp;u_w=1366&amp;u_h=768&amp;url=https%3A%2F%2Fwww.perplexity.ai%2F&amp;ref=https%3A%2F%2Fwww.perplexity.ai%2F%3Flogin-source%3DoneTapHome%26login-new%3Dfalse&amp;frm=0&amp;tiba=Perplexity&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1277026546.1758679300&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"
+    ></script>
+    <style>
+      .body-style-open {
+        height: 100% !important;
+        overflow: hidden !important;
+      }
+
+      /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbml0aWFsaXplL2luaXRpYWxpemUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtJQUNJLHVCQUF1QjtJQUN2QiwyQkFBMkI7RUFDN0IiLCJzb3VyY2VzQ29udGVudCI6WyJcbi5ib2R5LXN0eWxlLW9wZW4ge1xuICAgIGhlaWdodDogMTAwJSAhaW1wb3J0YW50O1xuICAgIG92ZXJmbG93OiBoaWRkZW4gIWltcG9ydGFudDtcbiAgfVxuICAiXSwic291cmNlUm9vdCI6IiJ9 */
+    </style>
+  </head>
+  <body class="md:bg-underlay bg-transparent">
+    <main id="root">
+      <div class="border-subtlest ring-subtlest divide-subtlest bg-underlay">
+        <div class="isolate flex h-dvh">
+          <div class="flex size-full flex-1 transition-all duration-200">
+            <div class="group/sidebar relative z-10 hidden min-h-0 flex-none flex-row-reverse md:flex border-subtlest ring-subtlest divide-subtlest bg-transparent">
+              <div class="group/sidebar-menu pointer-events-none absolute inset-y-0 start-0 overflow-hidden ltr:-translate-x-px rtl:translate-x-px" style="width: 288px">
+                <div
+                  class="inset-y-0 border-transparent duration-100 dark:border-transparent end-md absolute start-0 flex flex-col border-e pe-[20px] ease-inCubic pointer-events-none opacity-0 ltr:-translate-x-[4%] rtl:translate-x-[4%] border-subtlest ring-subtlest divide-subtlest bg-underlay"
+                  style="padding-left: 84px; width: 272px"
+                >
+                  <div class="group/sidebar-menu-header relative mb-[12px] flex min-h-0 items-center justify-between border-b py-[12px] border-subtlest ring-subtlest divide-subtlest bg-transparent">
+                    <div class="font-sans text-sm font-medium leading-[1.125rem] text-foreground selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">Home</div>
+                    <div class="flex min-h-[24px] items-center">
+                      <button
+                        data-testid="sidebar-pin-sidebar"
+                        aria-label="Pin Sidebar"
+                        type="button"
+                        class="focus-visible:bg-subtle hover:bg-subtle text-quiet hover:text-foreground dark:hover:bg-subtle !-me-sm font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-xs h-6 aspect-[9/8]"
+                        data-state="closed"
+                      >
+                        <div class="flex items-center min-w-0 gap-two justify-center">
+                          <div class="flex shrink-0 items-center justify-center size-3.5">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="tabler-icon tabler-icon-pin tabler-icon"
+                            >
+                              <path d="M15 4.5l-4 4l-4 1.5l-1.5 1.5l7 7l1.5 -1.5l1.5 -4l4 -4"></path>
+                              <path d="M9 15l-4.5 4.5"></path>
+                              <path d="M14.5 4l5.5 5.5"></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="relative flex min-h-0 flex-1 flex-col" style="opacity: 1; transform: none">
+                    <div class="scrollbar-subtle mx-[-12px] mt-[-12px] flex min-h-0 flex-1 overflow-y-auto overflow-x-hidden p-[12px]">
+                      <div class="w-full">
+                        <div class="flex flex-col gap-[12px]">
+                          <div class="flex flex-col gap-[10px]">
+                            <a class="group relative block" draggable="false" href="/finance"
+                              ><div class="group relative block">
+                                <div class="-inset-y-xs -inset-x-sm duration-quick absolute rounded-md opacity-0 group-hover:opacity-100 border-subtlest ring-subtlest divide-subtlest bg-subtle"></div>
+                                <div class="relative flex items-center gap-2 font-sans text-sm text-foreground selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" color="currentColor" class="tabler-icon size-[18px]" fill="currentColor" fill-rule="evenodd">
+                                    <path
+                                      d="M19.6602 2C20.9486 2.00018 21.993 3.0446 21.9932 4.33301C21.9932 5.62156 20.9487 6.66682 19.6602 6.66699C19.6103 6.66699 19.5608 6.66128 19.5117 6.6582L16.9111 12.3467C16.803 12.5829 16.5903 12.7551 16.3369 12.8125C16.1151 12.8626 15.8841 12.8195 15.6963 12.6963L15.6182 12.6387L11.374 9.08691L5.05176 19.4873H10.333V13.667C10.333 13.2069 10.706 12.8342 11.166 12.834C11.6263 12.834 11.999 13.2068 11.999 13.667V19.4873H15.3203V15.333C15.3205 14.8729 15.6932 14.5 16.1533 14.5C16.6134 14.5001 16.9862 14.873 16.9863 15.333V19.4873H19.5C19.9595 19.4871 20.3328 19.1128 20.333 18.6533V9.49414C20.333 9.03406 20.706 8.66042 21.166 8.66016C21.6263 8.66016 22 9.0339 22 9.49414V18.6533C21.9998 20.0333 20.88 21.1531 19.5 21.1533H4.5C3.2062 21.1532 2.14091 20.1693 2.0127 18.9092L2 18.6533V5.33398C2 3.9538 3.11983 2.83407 4.5 2.83398H14.5L14.585 2.83789C15.0051 2.8806 15.333 3.23555 15.333 3.66699C15.3328 4.09829 15.005 4.4534 14.585 4.49609L14.5 4.5H4.5C4.04031 4.50008 3.66602 4.87427 3.66602 5.33398V18.5586L10.4541 7.39355L10.5059 7.31836C10.6338 7.15201 10.821 7.03859 11.0303 7.00391C11.2698 6.96435 11.515 7.03176 11.7012 7.1875L15.8496 10.6582L17.9951 5.96777C17.5817 5.54678 17.3262 4.96964 17.3262 4.33301C17.3263 3.04449 18.3716 2 19.6602 2Z"
+                                    ></path></svg
+                                  ><span class="w-full overflow-hidden whitespace-nowrap">Finance</span>
+                                </div>
+                              </div></a
+                            ><a class="group relative block" draggable="false" href="/travel"
+                              ><div class="group relative block">
+                                <div class="-inset-y-xs -inset-x-sm duration-quick absolute rounded-md opacity-0 group-hover:opacity-100 border-subtlest ring-subtlest divide-subtlest bg-subtle"></div>
+                                <div class="relative flex items-center gap-2 font-sans text-sm text-foreground selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" color="currentColor" class="tabler-icon size-[18px]" fill="currentColor" fill-rule="evenodd">
+                                    <path
+                                      d="M13.7718 4C18.3247 4 21.9993 7.68969 21.9993 12.2275C21.9992 16.7663 18.3105 20.4551 13.7718 20.4551C12.7177 20.455 11.6928 20.2498 10.7679 19.8828L10.7347 19.8701L10.6956 19.8506L10.6888 19.8477L10.7005 19.8506C10.2597 19.7402 9.99093 19.2935 10.1009 18.8525C10.2112 18.4114 10.6588 18.1427 11.0999 18.2529C11.201 18.2782 11.2994 18.3177 11.3802 18.3545C12.1137 18.6448 12.931 18.8086 13.7718 18.8086C17.401 18.8086 20.3527 15.8568 20.3528 12.2275C20.3528 8.59729 17.4133 5.64648 13.7718 5.64648C10.1295 5.64662 7.17822 8.59799 7.17802 12.2402C7.17802 12.6986 7.22473 13.1431 7.31181 13.5674L7.4124 13.9834L7.43974 14.1484C7.4658 14.5306 7.22073 14.892 6.8372 14.998C6.45383 15.1037 6.05889 14.9192 5.88505 14.5781L5.82451 14.4229L5.69853 13.8975C5.58917 13.3644 5.53154 12.8096 5.53154 12.2402C5.53174 7.68849 9.22001 4.00013 13.7718 4ZM10.6888 19.8477C10.6862 19.8469 10.6839 19.8467 10.6839 19.8467H10.6868L10.6888 19.8477ZM16.2591 8.95508C16.2902 8.95596 16.3209 8.96043 16.3519 8.96484L16.4017 8.9707C16.4046 8.9713 16.4075 8.97202 16.4104 8.97266C16.4181 8.97431 16.4253 8.97762 16.4329 8.97949C16.4707 8.98881 16.5077 8.99934 16.5433 9.01367C16.5527 9.01748 16.5613 9.02317 16.5706 9.02734C16.6042 9.04238 16.6372 9.05793 16.6683 9.07715C16.6781 9.08327 16.6869 9.09107 16.6966 9.09766C16.7271 9.11839 16.7571 9.13953 16.7845 9.16406C16.786 9.16545 16.7878 9.16657 16.7894 9.16797C16.8129 9.18943 16.8343 9.21289 16.8548 9.23633C16.8667 9.24994 16.878 9.26394 16.889 9.27832C16.9079 9.30307 16.9259 9.32817 16.9417 9.35449C16.9476 9.36436 16.9528 9.37463 16.9583 9.38477C16.9747 9.41493 16.9889 9.44591 17.0013 9.47754C17.0042 9.48503 17.0073 9.49241 17.0101 9.5C17.0231 9.53641 17.0326 9.5737 17.0403 9.61133C17.0427 9.62301 17.0453 9.63463 17.0472 9.64648C17.0535 9.68596 17.0573 9.72569 17.0579 9.76562C17.058 9.76941 17.0589 9.77354 17.0589 9.77734V13.8877C17.0587 14.3423 16.6902 14.7109 16.2356 14.7109C15.7811 14.7109 15.4126 14.3423 15.4124 13.8877V11.8701C12.0054 15.4487 9.45177 17.4947 7.53252 18.5244C5.5087 19.61 3.92643 19.6815 2.8792 18.8291L2.67705 18.6465C2.04543 18.0149 1.92632 17.1236 2.03642 16.2793C2.14798 15.424 2.50735 14.468 3.03545 13.4951C3.25239 13.0955 3.75298 12.9462 4.15263 13.1631C4.55218 13.38 4.69947 13.8807 4.48271 14.2803C4.01013 15.1509 3.74555 15.9076 3.66923 16.4912C3.59173 17.0854 3.72193 17.3609 3.84111 17.4805C4.09158 17.7309 4.8066 18.118 6.7542 17.0732C8.47468 16.1502 10.9246 14.2091 14.345 10.6006H12.1253C11.6707 10.6006 11.3022 10.2319 11.302 9.77734C11.302 9.32259 11.6705 8.95312 12.1253 8.95312H16.2356L16.2591 8.95508Z"
+                                    ></path></svg
+                                  ><span class="w-full overflow-hidden whitespace-nowrap">Travel</span>
+                                </div>
+                              </div></a
+                            ><a class="group relative block" draggable="false" href="/academic"
+                              ><div class="group relative block">
+                                <div class="-inset-y-xs -inset-x-sm duration-quick absolute rounded-md opacity-0 group-hover:opacity-100 border-subtlest ring-subtlest divide-subtlest bg-subtle"></div>
+                                <div class="relative flex items-center gap-2 font-sans text-sm text-foreground selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" color="currentColor" class="tabler-icon size-[18px]" fill="currentColor" fill-rule="evenodd">
+                                    <path
+                                      d="M12 2C12.4599 2 12.833 2.37307 12.833 2.83301V18.5176L17.0029 14.9473V5.6748L15.918 6.75488C15.5918 7.07873 15.0644 7.0769 14.7402 6.75098C14.4163 6.42487 14.4182 5.89747 14.7441 5.57324L17.249 3.08105L17.3438 3.00098C17.5762 2.83052 17.8846 2.79036 18.1562 2.90332C18.4666 3.0325 18.6688 3.33569 18.6689 3.67188V15.3311C18.6689 15.5743 18.5618 15.8056 18.377 15.9639L14.2529 19.4951H20.334V6.16406C20.334 5.70426 20.7072 5.33127 21.167 5.33105C21.6269 5.33105 22 5.70412 22 6.16406V20.3281C21.9999 20.788 21.6269 21.1611 21.167 21.1611H2.83301C2.37314 21.1611 2.00012 20.788 2 20.3281V6.16406C2 5.70412 2.37307 5.33105 2.83301 5.33105C3.29279 5.33124 3.66504 5.70424 3.66504 6.16406V19.4951H9.74707L5.62207 15.9639C5.43739 15.8057 5.33105 15.5742 5.33105 15.3311V3.67188L5.33984 3.54688C5.38309 3.26217 5.57241 3.01627 5.84375 2.90332C6.1542 2.77424 6.51245 2.84416 6.75098 3.08105L9.25586 5.57324L9.36328 5.70312C9.57757 6.02568 9.54328 6.4656 9.25977 6.75098C8.97578 7.03648 8.53579 7.07335 8.21191 6.86035L8.08203 6.75488L6.99707 5.6748V14.9473L11.167 18.5176V2.83301C11.167 2.37308 11.5401 2.00002 12 2Z"
+                                    ></path></svg
+                                  ><span class="w-full overflow-hidden whitespace-nowrap">Academic</span>
+                                </div>
+                              </div></a
+                            ><a class="group relative block" draggable="false" href="/sports"
+                              ><div class="group relative block">
+                                <div class="-inset-y-xs -inset-x-sm duration-quick absolute rounded-md opacity-0 group-hover:opacity-100 border-subtlest ring-subtlest divide-subtlest bg-subtle"></div>
+                                <div class="relative flex items-center gap-2 font-sans text-sm text-foreground selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" color="currentColor" class="tabler-icon size-[18px]" fill="currentColor" fill-rule="evenodd">
+                                    <path
+                                      d="M11.4709 8.87793C11.7944 8.55504 12.3193 8.55494 12.6427 8.87793C12.9664 9.20154 12.9664 9.72815 12.6427 10.0518L11.4758 11.2178C10.8318 11.8619 10.8319 12.9144 11.4758 13.5586L12.6427 14.7256C13.8535 15.9364 13.9289 17.8603 12.8693 19.1602L12.6427 19.4111L10.2961 21.7578L10.1652 21.8633C9.84359 22.0757 9.40639 22.0409 9.12322 21.7578C8.80027 21.4342 8.80001 20.9094 9.12322 20.5859L11.4709 18.2393L11.5832 18.1143C12.1118 17.4654 12.0748 16.5015 11.4709 15.8975L10.3039 14.7305C9.01279 13.439 9.01267 11.3373 10.3039 10.0459L11.4709 8.87793ZM7.05388 13.5059C7.37528 13.2941 7.81193 13.3288 8.0949 13.6113C8.41851 13.9349 8.41851 14.4615 8.0949 14.7852L6.9279 15.9512C5.71723 17.1615 3.79406 17.2367 2.49431 16.1777L2.24236 15.9512L2.13591 15.8203C1.92421 15.4989 1.95993 15.0623 2.24236 14.7793C2.52556 14.4963 2.96278 14.4614 3.28435 14.6738L3.41521 14.7793L3.53923 14.8926C4.18804 15.4213 5.15191 15.3831 5.75603 14.7793L6.92302 13.6113L7.05388 13.5059ZM20.4865 11.2646C20.81 10.9416 21.3349 10.9416 21.6584 11.2646C21.9819 11.5882 21.9818 12.1139 21.6584 12.4375L20.6379 13.458C19.6227 14.4868 18.043 14.6106 16.8869 13.8398C16.5067 13.5861 16.4033 13.072 16.6564 12.6914C16.9103 12.3107 17.4261 12.2071 17.8068 12.4609C18.3193 12.8026 19.0166 12.7433 19.4601 12.292L20.4865 11.2646ZM8.92497 6.58105C10.8763 4.81834 13.8912 4.87673 15.7717 6.75684L17.5353 8.52051L17.6388 8.64746C17.7288 8.78253 17.7775 8.94274 17.7775 9.10742C17.7774 9.32683 17.6904 9.53714 17.5353 9.69238L14.2199 13.0068L14.091 13.1133C13.7694 13.326 13.3323 13.29 13.049 13.0068C12.7256 12.6832 12.7255 12.1585 13.049 11.835L15.7765 9.10547L14.5998 7.92969C13.3866 6.71666 11.4639 6.64042 10.1623 7.70215L9.9113 7.92969L7.5656 10.2764L6.97869 9.68945L6.39177 9.10449L8.73943 6.75684L8.92497 6.58105ZM7.5656 10.2764C7.24199 10.6 6.71538 10.6 6.39177 10.2764C6.06872 9.9529 6.06882 9.42802 6.39177 9.10449L7.5656 10.2764ZM18.5802 2C19.9567 2.0002 21.0724 3.11666 21.0724 4.49316C21.0723 5.86956 19.9566 6.98515 18.5802 6.98535C17.2037 6.98535 16.0872 5.86968 16.0871 4.49316C16.0871 3.11653 17.2036 2 18.5802 2Z"
+                                    ></path></svg
+                                  ><span class="w-full overflow-hidden whitespace-nowrap">Sports</span>
+                                </div>
+                              </div></a
+                            >
+                          </div>
+                          <div class="bg-subtle h-px"></div>
+                          <div class="group/header gap-xs flex h-6 items-center justify-between -mb-xs">
+                            <a class="group relative block" data-testid="library-button" draggable="false" href="/library"
+                              ><div class="-inset-y-xs -inset-x-sm duration-quick absolute rounded-md opacity-0 group-hover:opacity-100 border-subtlest ring-subtlest divide-subtlest bg-subtle"></div>
+                              <span class="relative flex items-center gap-0.5"
+                                ><div class="group-hover:text-foreground font-sans text-xs font-medium text-quiet selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">Library</div>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="tabler-icon tabler-icon-chevron-right text-quiet group-hover:text-foreground -me-xs duration-quick size-4 opacity-0 group-hover/header:opacity-100 rtl:rotate-180"
+                                >
+                                  <path d="M9 6l6 6l-6 6"></path></svg></span
+                            ></a>
+                            <div class="inline-flex" style="opacity: 1; transform: none"><div class="size-[24px]"></div></div>
+                          </div>
+                          <a class="group relative block" draggable="false" href="/"
+                            ><div class="group relative block">
+                              <div class="-inset-y-xs -inset-x-sm duration-quick absolute rounded-md opacity-0 group-hover:opacity-100 border-subtlest ring-subtlest divide-subtlest bg-subtle"></div>
+                              <div class="relative flex items-center gap-2 font-sans text-sm text-quiet selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  class="tabler-icon tabler-icon-plus tabler-icon size-[18px]"
+                                >
+                                  <path d="M12 5l0 14"></path>
+                                  <path d="M5 12l14 0"></path></svg
+                                ><span class="w-full overflow-hidden whitespace-nowrap">Create a Thread</span>
+                              </div>
+                            </div></a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="py-md scrollbar-none relative flex h-full flex-col items-center overflow-y-auto overflow-x-hidden border-subtlest ring-subtlest divide-subtlest bg-transparent" style="width: 72px">
+                <span
+                  ><a class="mt-xs active:ease-outExpo block duration-100 ease-out active:scale-[0.97]" href="/"
+                    ><div class="transition-all duration-300 ease-in-out hover:scale-105">
+                      <div class="h-auto group w-6 md:w-8">
+                        <svg viewBox="0 0 101 116" stroke="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            class="stroke-foreground group-hover:stroke-super transition-colors duration-300"
+                            d="M86.4325 6.53418L50.4634 36.9696H86.4325V6.53418Z M50.4625 36.9696L17.2603 6.53418V36.9696H50.4625Z M50.4634 1L50.4634 114.441 M83.6656 70.172L50.4634 36.9697V79.3026L83.6656 108.908V70.172Z M17.2603 70.172L50.4625 36.9697V78.4497L17.2603 108.908V70.172Z M3.42627 36.9697V81.2394H17.2605V70.172L50.4628 36.9697H3.42627Z M50.4634 36.9697L83.6656 70.172V81.2394H97.4999V36.9697L50.4634 36.9697Z"
+                            stroke-width="5.53371"
+                            stroke-miterlimit="10"
+                          ></path>
+                        </svg>
+                      </div></div></a
+                ></span>
+                <div class="pt-sm relative flex w-full flex-1 flex-col items-center">
+                  <button
+                    data-testid="sidebar-new-thread"
+                    aria-label="New Thread"
+                    type="button"
+                    class="bg-subtle text-foreground md:hover:text-quiet my-lg hover:scale-105 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-full cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-base h-10 aspect-square"
+                    data-state="closed"
+                  >
+                    <div class="flex items-center min-w-0 gap-two justify-center">
+                      <div class="flex shrink-0 items-center justify-center size-5">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="tabler-icon tabler-icon-plus tabler-icon"
+                        >
+                          <path d="M12 5l0 14"></path>
+                          <path d="M5 12l14 0"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                  <div class="pb-xl w-full">
+                    <a data-testid="sidebar-home" class="p-sm group flex w-full flex-col items-center justify-center gap-0.5" href="/"
+                      ><div class="grid size-[40px] place-items-center border-subtlest ring-subtlest divide-subtlest bg-transparent">
+                        <div class="size-[90%] rounded-md duration-100 [grid-area:1/-1] group-hover:opacity-100 border-subtlest ring-subtlest divide-subtlest bg-subtle"></div>
+                        <div class="relative [grid-area:1/-1]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            color="currentColor"
+                            class="tabler-icon duration-100 group-hover:scale-110 text-foreground scale-110"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                          >
+                            <path
+                              d="M18.8809 18.8809C19.2013 18.5604 19.7091 18.5407 20.0527 18.8213L20.1191 18.8809L22.3086 21.0713L22.3691 21.1377C22.6493 21.4814 22.6289 21.9883 22.3086 22.3086C21.9883 22.6288 21.4813 22.6493 21.1377 22.3691L21.0713 22.3086L18.8809 20.1191L18.8213 20.0527C18.5407 19.7091 18.5605 19.2013 18.8809 18.8809ZM10.75 2.00488C15.5724 2.00494 19.5048 5.92589 19.5049 10.7598C19.5049 15.593 15.5832 19.5146 10.75 19.5146H9.875V19.4502C5.46095 19.01 1.9953 15.278 1.99512 10.7402C1.99512 5.90341 5.93043 2.00495 10.75 2.00488ZM10.75 3.75488C6.88968 3.75495 3.74512 6.87714 3.74512 10.7402C3.74531 14.6061 6.8927 17.7451 10.75 17.7451H11.25C14.8836 17.4884 17.7549 14.4584 17.7549 10.7598C17.7548 6.89383 14.6074 3.75494 10.75 3.75488ZM10.75 9C11.7165 9 12.5 9.7835 12.5 10.75C12.4999 11.7164 11.7165 12.5 10.75 12.5C9.78354 12.5 9.00006 11.7164 9 10.75C9 9.7835 9.7835 9 10.75 9Z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        class="line-clamp-2 w-full text-ellipsis text-center leading-[1.1] font-medium font-sans text-2xs font-normal text-foreground selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super"
+                      >
+                        Home
+                      </div></a
+                    ><a data-testid="sidebar-discover" class="p-sm group flex w-full flex-col items-center justify-center gap-0.5" href="/discover"
+                      ><div class="grid size-[40px] place-items-center border-subtlest ring-subtlest divide-subtlest bg-transparent">
+                        <div class="size-[90%] rounded-md duration-100 [grid-area:1/-1] group-hover:opacity-100 opacity-0 border-subtlest ring-subtlest divide-subtlest bg-subtle"></div>
+                        <div class="relative [grid-area:1/-1]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" color="currentColor" class="tabler-icon duration-100 group-hover:scale-110 text-quiet" fill="currentColor" fill-rule="evenodd">
+                            <path
+                              d="M12.3799 0.995117C18.6621 0.995117 23.7549 6.08788 23.7549 12.3701C23.7549 18.6524 18.6621 23.7451 12.3799 23.7451C6.0977 23.7451 1.00488 18.6523 1.00488 12.3701C1.00488 6.08792 6.0977 0.995179 12.3799 0.995117ZM12.3701 2.75488C11.8475 2.75509 11.1171 3.22655 10.4121 4.58887L10.2715 4.87402C10.065 5.3106 9.54321 5.49714 9.10645 5.29102C8.66967 5.08453 8.48308 4.56284 8.68945 4.12598L8.84277 3.81445C8.93133 3.64256 9.02498 3.47428 9.12305 3.31055C7.13221 4.02636 5.44689 5.38035 4.31055 7.125H12.3809L12.4697 7.12988C12.9108 7.17482 13.2558 7.54711 13.2559 8C13.2559 8.45294 12.9108 8.82517 12.4697 8.87012L12.3809 8.875H3.41211C2.98945 9.95869 2.75488 11.1368 2.75488 12.3701C2.75488 13.6071 2.99092 14.7886 3.41602 15.875H4.94043C5.42344 15.8752 5.81537 16.2669 5.81543 16.75C5.81543 17.2331 5.42348 17.6248 4.94043 17.625H4.31738C5.45343 19.3645 7.13555 20.7142 9.12207 21.4287C8.88505 21.0314 8.66832 20.5962 8.47461 20.1318C7.62775 18.1014 7.12501 15.3566 7.125 12.3701C7.125 12.083 7.12514 11.7675 7.13574 11.46C7.15246 10.9771 7.55716 10.5996 8.04004 10.6162C8.523 10.6329 8.90142 11.0375 8.88477 11.5205C8.87538 11.7927 8.875 12.0775 8.875 12.3701C8.87501 15.1832 9.3519 17.6886 10.0898 19.458C10.4596 20.3446 10.8783 21.0053 11.2979 21.4307C11.7142 21.8527 12.0793 21.995 12.3799 21.9951C12.9373 21.9951 13.731 21.4591 14.4785 19.877L14.5215 19.7979C14.7504 19.418 15.2339 19.2656 15.6436 19.459C16.0804 19.6654 16.2679 20.1871 16.0615 20.624L15.9072 20.9355C15.8202 21.1046 15.7271 21.2695 15.6309 21.4307C17.6203 20.7168 19.305 19.3664 20.4424 17.625H12.3799C11.8967 17.6249 11.5049 17.2332 11.5049 16.75C11.5049 16.2668 11.8967 15.8751 12.3799 15.875H21.3438C21.7689 14.7886 22.0049 13.6072 22.0049 12.3701C22.0049 11.1368 21.7703 9.95871 21.3477 8.875H19.8096C19.3265 8.87477 18.9346 8.48311 18.9346 8C18.9346 7.51695 19.3266 7.12523 19.8096 7.125H20.4492C19.309 5.3744 17.6159 4.01757 15.6162 3.30371C15.8576 3.70575 16.0787 4.14659 16.2754 4.61816C17.1223 6.64864 17.625 9.39331 17.625 12.3799C17.625 12.667 17.6258 12.9825 17.6152 13.29L17.6074 13.3789C17.5476 13.8184 17.1627 14.1501 16.71 14.1348C16.2272 14.1179 15.8496 13.7123 15.8662 13.2295L15.875 12.3799C15.875 9.56674 15.3982 7.0614 14.6602 5.29199C14.2904 4.40554 13.8727 3.7447 13.4531 3.31934C13.0368 2.89735 12.6707 2.75503 12.3701 2.75488ZM12.3799 10.6201C13.3464 10.6201 14.1299 11.4036 14.1299 12.3701C14.1299 13.3366 13.3464 14.1201 12.3799 14.1201C11.4134 14.1201 10.6299 13.3366 10.6299 12.3701C10.6299 11.4037 11.4134 10.6202 12.3799 10.6201Z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="line-clamp-2 w-full text-ellipsis text-center leading-[1.1] font-sans text-2xs font-normal text-quiet selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">
+                        Discover
+                      </div></a
+                    ><a data-testid="sidebar-spaces" class="p-sm group flex w-full flex-col items-center justify-center gap-0.5" href="/spaces/templates/"
+                      ><div class="grid size-[40px] place-items-center border-subtlest ring-subtlest divide-subtlest bg-transparent">
+                        <div class="size-[90%] rounded-md duration-100 [grid-area:1/-1] group-hover:opacity-100 opacity-0 border-subtlest ring-subtlest divide-subtlest bg-subtle"></div>
+                        <div class="relative [grid-area:1/-1]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" color="currentColor" class="tabler-icon duration-100 group-hover:scale-110 text-quiet" fill="currentColor" fill-rule="evenodd">
+                            <path
+                              d="M22.1475 2.00586C22.1569 2.00616 22.1663 2.00721 22.1758 2.00781L22.209 2.00977C22.2435 2.01325 22.2773 2.01899 22.3105 2.02637C22.3158 2.02753 22.3209 2.02901 22.3262 2.03027C22.3568 2.03766 22.3858 2.04906 22.415 2.05957C22.5326 2.10177 22.6441 2.16668 22.7383 2.26074C22.7468 2.26924 22.7546 2.27835 22.7627 2.28711C22.7657 2.29033 22.7686 2.29361 22.7715 2.29688C22.8041 2.33334 22.8329 2.37193 22.8584 2.41211C22.8612 2.41654 22.8635 2.4213 22.8662 2.42578C22.8909 2.46628 22.9132 2.50759 22.9307 2.55078C22.972 2.65239 22.9951 2.76339 22.9951 2.87988V17.75C22.9951 18.2332 22.6033 18.6249 22.1201 18.625H7.6123L4.99219 21.2451H16.875C16.8776 20.7642 17.2684 20.3751 17.75 20.375C18.2332 20.3751 18.625 20.7668 18.625 21.25V22.1201C18.6249 22.6033 18.2332 22.9951 17.75 22.9951H2.87988C2.39673 22.9951 2.00495 22.6033 2.00488 22.1201V7.25L2.00977 7.16016C2.05476 6.71917 2.42703 6.37506 2.87988 6.375H17.3867L20.0068 3.75488H8.125C8.12231 4.23583 7.73158 4.625 7.25 4.625C6.76679 4.625 6.37506 4.2332 6.375 3.75V2.87988L6.37988 2.79004C6.42488 2.34901 6.7971 2.00488 7.25 2.00488H22.1201L22.1475 2.00586ZM18.625 7.6123V14.25C18.625 14.7332 18.2332 15.1249 17.75 15.125C17.2668 15.1249 16.875 14.7332 16.875 14.25V8.125H3.75488V20.0068L6.375 17.3867V10.75C6.375 10.2668 6.76675 9.875 7.25 9.875C7.73325 9.875 8.125 10.2668 8.125 10.75V16.875H21.2451V4.99219L18.625 7.6123ZM12.5 10.75C13.4665 10.75 14.25 11.5335 14.25 12.5C14.25 13.4665 13.4665 14.25 12.5 14.25C11.5335 14.25 10.75 13.4665 10.75 12.5C10.75 11.5335 11.5335 10.75 12.5 10.75Z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="line-clamp-2 w-full text-ellipsis text-center leading-[1.1] font-sans text-2xs font-normal text-quiet selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">
+                        Spaces
+                      </div></a
+                    >
+                  </div>
+                </div>
+                <div class="pb-sm gap-md mt-auto flex w-full min-w-0 flex-col items-center justify-center [&amp;&gt;*]:w-full">
+                  <div class="relative flex flex-col items-center justify-center">
+                    <span class="inline-flex w-full"
+                      ><div class="flex w-full flex-col items-center justify-center">
+                        <div class="flex flex-col items-center justify-center">
+                          <div class="group relative size-9 rounded-full" data-state="closed">
+                            <button
+                              data-testid="sidebar-new-thread"
+                              type="button"
+                              class="focus-visible:bg-subtle hover:bg-subtle text-quiet hover:text-foreground dark:hover:bg-subtle !size-full dark:!text-foreground dark:[&amp;_svg]:opacity-[0.55] dark:group-hover:[&amp;_svg]:opacity-100 dark:[&amp;_svg]:duration-normal font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-full cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-lg h-14 aspect-square"
+                            >
+                              <div class="flex items-center min-w-0 gap-two justify-center">
+                                <div class="flex shrink-0 items-center justify-center size-7">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="tabler-icon tabler-icon-bell tabler-icon"
+                                  >
+                                    <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+                                    <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                            <div class="right-xs top-xs translate-y-two -translate-x-three pointer-events-none absolute"></div>
+                          </div>
+                        </div></div
+                    ></span>
+                  </div>
+                  <span class="inline-flex"
+                    ><div class="inline-flex w-full" data-testid="sidebar-popover-trigger-signed-in">
+                      <div class="gap-xs group flex w-full cursor-pointer flex-col items-center">
+                        <div class="relative select-none duration-100 group-hover:opacity-80">
+                          <div class="text-inverse relative">
+                            <div class="relative flex aspect-square shrink-0 items-center justify-center bg-subtler rounded-full size-8 ring-super border-inverse border-2 ring-[1.5px]">
+                              <img alt="User avatar" class="size-full object-cover rounded-full" src="https://imagedelivery.net/MPdwyYSWT8IY7lxgN3x3Uw/83b1c1ef-9d90-4139-25ce-b3989f099c00/thumbnail" />
+                              <div class="absolute top-full mt-[-6px] w-[24px] rounded-r-full bg-current p-[1.5px]">
+                                <div class="h-auto group w-full">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1102.02 529.46">
+                                    <path
+                                      class="fill-super"
+                                      d="M1068.23,126.49c-23.5-41.68-58.35-75.11-100.77-96.67C928.5,10.04,884.37,0,836.29,0H66.16C29.56,0-.08,29.71,0,66.3l1,463.16h109.72V107.9h78.16v24.37c0,2.66,3.19,3.99,5.1,2.13,20.89-20.25,50.62-30.5,88.64-30.5,26.8,0,51.2,6.11,72.52,18.17,21.44,12.13,38.59,30.51,50.96,54.66h0c12.27,23.95,18.49,53.6,18.49,88.14s-6.22,63.91-18.49,87.85c-12.37,24.14-29.52,42.53-50.96,54.66-21.33,12.06-45.73,18.17-72.52,18.17-16.55,0-55.7-2.68-87.27-25.54-1.98-1.43-4.75-.01-4.75,2.43v127.02h645.68c48.09,0,92.22-10.03,131.18-29.83,42.41-21.55,77.26-54.98,100.78-96.69,22.41-39.76,33.78-86.22,33.78-138.07s-11.37-98.6-33.79-138.39ZM650.3,177.46h-33.53c-23.25,0-40.37,6.1-50.86,18.14-10.7,12.27-16.12,32.09-16.12,58.91v164.71h-79.89V107.9h77.01v20.91c0,2.68,3.28,4.04,5.13,2.11,4.56-4.76,9.87-8.79,15.89-12.06,11.94-6.49,28.27-9.77,48.55-9.77h33.81v68.37ZM967.21,352.21c-13.66,24.23-33.03,42.83-57.56,55.29-24.32,12.36-52.71,18.62-84.38,18.62s-60.35-6.27-84.67-18.62c-24.54-12.46-43.9-31.07-57.56-55.29-13.58-24.09-20.47-53.47-20.47-87.34s6.89-63.54,20.47-87.63c13.65-24.22,33.02-42.82,57.56-55.29,24.33-12.36,52.81-18.62,84.67-18.62s60.06,6.27,84.38,18.62c24.53,12.47,43.9,31.07,57.56,55.29,13.58,24.1,20.47,53.58,20.47,87.63s-6.89,63.25-20.47,87.34Z"
+                                    ></path>
+                                    <path
+                                      class="fill-super"
+                                      d="M868.46,179.51c-12.16-7.28-26.7-10.97-43.2-10.97s-31.32,3.69-43.48,10.97c-12.07,7.23-21.57,18.05-28.23,32.16-6.79,14.4-10.23,32.3-10.23,53.2s3.45,38.57,10.24,53.07c6.66,14.2,16.19,25.06,28.35,32.28,12.26,7.29,26.85,10.98,43.36,10.98s31.04-3.69,43.2-10.97c12.07-7.23,21.56-18.09,28.22-32.29,6.79-14.5,10.24-32.35,10.24-53.07s-3.45-38.57-10.24-53.07c-6.66-14.2-16.15-25.07-28.22-32.29Z"
+                                    ></path>
+                                    <path
+                                      class="fill-super"
+                                      d="M221.1,351.54c12.26,7.29,26.85,10.98,43.36,10.98s31.04-3.69,43.2-10.97c12.07-7.23,21.56-18.09,28.22-32.29,6.79-14.5,10.24-32.35,10.24-53.07s-3.45-38.57-10.24-53.07c-6.66-14.2-16.15-25.06-28.22-32.29-12.16-7.28-26.7-10.97-43.19-10.97s-31.32,3.69-43.48,10.97c-12.07,7.23-21.57,18.05-28.23,32.16-6.79,14.4-10.23,32.3-10.23,53.2s3.45,38.57,10.24,53.07c6.66,14.2,16.19,25.06,28.35,32.28Z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="tabler-icon tabler-icon-chevron-down text-quietest group-hover:text-quiet absolute right-0 top-1/2 size-3 -translate-y-1/2 translate-x-[calc(100%+2px)] duration-100"
+                          >
+                            <path d="M6 9l6 6l6 -6"></path>
+                          </svg>
+                        </div>
+                        <div class="px-xs w-full truncate text-center mt-two font-sans text-2xs font-normal text-quiet selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">Account</div>
+                      </div>
+                    </div></span
+                  ><button class="gap-xs group inline-flex appearance-none flex-col items-center [@media(max-height:680px)]:hidden" data-testid="sidebar-upgrade-button">
+                    <div class="flex size-8 items-center justify-center rounded-full duration-100 group-hover:opacity-80 border-subtlest ring-subtlest divide-subtlest bg-subtle">
+                      <div class="font-sans text-base text-foreground selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="tabler-icon tabler-icon-arrow-up-right size-4"
+                        >
+                          <path d="M17 7l-10 10"></path>
+                          <path d="M8 7l9 0l0 9"></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="px-xs w-full truncate text-center font-sans text-2xs font-normal text-quiet selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">Upgrade</div>
+                  </button>
+                  <div class="gap-xs flex flex-col items-center [@media(max-height:680px)]:hidden" data-state="closed">
+                    <button
+                      type="button"
+                      class="bg-subtle text-foreground md:hover:text-quiet font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-full cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 aspect-square"
+                    >
+                      <div class="flex items-center min-w-0 gap-two justify-center">
+                        <div class="relative ml-auto">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="tabler-icon tabler-icon-download tabler-icon size-4"
+                          >
+                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                            <path d="M7 11l5 5l5 -5"></path>
+                            <path d="M12 4l0 12"></path>
+                          </svg>
+                          <div class="absolute size-2 rounded-full -right-sm -top-sm ring-offset ring-2" style="background-color: rgb(255, 59, 48)"></div>
+                        </div>
+                      </div>
+                    </button>
+                    <div class="px-xs w-full truncate text-center font-sans text-2xs font-normal text-quiet selection:bg-super/50 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super">Install</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="erp-tab:p-0 md:gap-xs erp-tab:gap-0 isolate flex h-auto max-h-screen min-w-0 grow flex-col" style="padding-left: 0px">
+              <div class="@container/main relative isolate min-h-0 flex-1 overflow-clip bg-clip-border border-subtlest ring-subtlest divide-subtlest bg-base">
+                <div class="mx-auto flex w-full flex-col h-full">
+                  <div class="scrollable-container scrollbar-subtle flex flex-1 basis-0 overflow-auto [scrollbar-gutter:stable]">
+                    <div class="mx-auto size-full max-w-screen-md px-md md:px-lg">
+                      <div class="erp-sidecar:px-md sm:px-md md:px-lg isolate mx-auto size-full sm:max-w-screen-md">
+                        <div class="relative flex h-full flex-col">
+                          <div class="py-md h-headerHeight flex items-center justify-between border-b md:hidden border-subtlest ring-subtlest divide-subtlest bg-transparent">
+                            <div class="gap-x-xs -ml-sm flex items-center">
+                              <button
+                                type="button"
+                                class="focus-visible:bg-subtle hover:bg-subtle text-quiet hover:text-foreground dark:hover:bg-subtle font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-full cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-base h-10 aspect-square"
+                              >
+                                <div class="flex items-center min-w-0 gap-two justify-center">
+                                  <div class="flex shrink-0 items-center justify-center size-5">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="tabler-icon tabler-icon-menu-2 tabler-icon"
+                                    >
+                                      <path d="M4 6l16 0"></path>
+                                      <path d="M4 12l16 0"></path>
+                                      <path d="M4 18l16 0"></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </button>
+                              <div class="h-auto group w-24">
+                                <svg viewBox="0 0 400 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M196.978 27.8931H200.033V34.1872H196.079C192.979 34.1872 190.669 34.9333 189.14 36.4254C187.615 37.9176 186.85 40.3662 186.85 43.7711V64.401H180.606V28.0333H186.85V33.8367C186.85 34.1622 187.014 34.3274 187.337 34.3274C187.52 34.3274 187.659 34.2823 187.754 34.1872C187.848 34.0921 187.938 33.9068 188.032 33.6264C189.234 29.8058 192.219 27.8931 196.983 27.8931H196.978ZM237.763 35.6894C239.402 38.6036 240.227 42.1137 240.227 46.2146C240.227 50.3156 239.407 53.8257 237.763 56.7399C236.119 59.6541 233.993 61.8323 231.38 63.2794C228.767 64.7265 225.956 65.4476 222.951 65.4476C217.03 65.4476 212.868 63.0691 210.464 58.3122C210.28 57.9417 210.046 57.7514 209.768 57.7514C209.49 57.7514 209.351 57.8916 209.351 58.172V77.6853H203.107V28.0333H209.351V34.2573C209.351 34.5377 209.49 34.6779 209.768 34.6779C210.046 34.6779 210.275 34.4926 210.464 34.1171C212.868 29.3602 217.03 26.9817 222.951 26.9817C225.956 26.9817 228.767 27.7028 231.38 29.1499C233.993 30.597 236.119 32.7751 237.763 35.6894ZM233.983 46.2146C233.983 41.9234 232.841 38.5786 230.551 36.1801C228.261 33.7816 225.246 32.5799 221.496 32.5799C217.745 32.5799 214.73 33.7816 212.44 36.1801C210.151 38.5836 209.311 41.9284 209.311 46.2146C209.311 50.5009 210.151 53.8507 212.44 56.2492C214.73 58.6527 217.75 59.8494 221.496 59.8494C225.241 59.8494 228.261 58.6477 230.551 56.2492C232.841 53.8507 233.983 50.5009 233.983 46.2146ZM134.595 35.7445C136.235 38.6587 137.059 42.1688 137.059 46.2697C137.059 50.3707 136.24 53.8808 134.595 56.795C132.951 59.7092 130.825 61.8874 128.213 63.3345C125.6 64.7816 122.788 65.5026 119.783 65.5026C113.863 65.5026 109.7 63.1242 107.296 58.3673C107.112 57.9967 106.879 57.8065 106.601 57.8065C106.322 57.8065 106.183 57.9467 106.183 58.2271V77.7404H99.9446V28.0883H106.188V34.3124C106.188 34.5928 106.327 34.733 106.606 34.733C106.884 34.733 107.112 34.5477 107.301 34.1722C109.705 29.4153 113.867 27.0368 119.788 27.0368C122.793 27.0368 125.605 27.7579 128.218 29.205C130.83 30.6521 132.956 32.8302 134.6 35.7445H134.595ZM130.815 46.2697C130.815 41.9785 129.673 38.6336 127.383 36.2352C125.093 33.8367 122.078 32.6349 118.328 32.6349C114.578 32.6349 111.563 33.8367 109.273 36.2352C106.983 38.6387 106.144 41.9835 106.144 46.2697C106.144 50.5559 106.983 53.9058 109.273 56.3043C111.563 58.7078 114.578 59.9045 118.328 59.9045C122.078 59.9045 125.093 58.7028 127.383 56.3043C129.673 53.9058 130.815 50.5559 130.815 46.2697ZM169.112 52.8543H175.703C174.824 56.2592 173.031 59.2085 170.329 61.7021C167.622 64.1957 163.748 65.4425 158.706 65.4425C154.911 65.4425 151.573 64.6614 148.682 63.0991C145.791 61.5369 143.561 59.3137 141.986 56.4195C140.412 53.5303 139.627 50.1253 139.627 46.2096C139.627 42.294 140.392 38.889 141.917 35.9998C143.442 33.1106 145.583 30.8824 148.335 29.3201C151.086 27.7579 154.31 26.9767 158.011 26.9767C161.711 26.9767 164.776 27.7479 167.344 29.2851C169.912 30.8223 171.829 32.8653 173.101 35.404C174.372 37.9477 175.008 40.7317 175.008 43.7611V47.9572H146.219C146.447 51.5925 147.664 54.4867 149.859 56.6298C152.055 58.7729 155.005 59.8494 158.706 59.8494C161.711 59.8494 164.016 59.2335 165.61 57.9967C167.205 56.7599 168.372 55.0475 169.112 52.8543ZM146.288 42.7146H168.074C168.074 39.545 167.264 37.0614 165.645 35.2638C164.026 33.4712 161.483 32.5699 158.015 32.5699C154.777 32.5699 152.129 33.4461 150.073 35.1937C148.017 36.9412 146.755 39.4498 146.293 42.7096L146.288 42.7146ZM245.169 64.396H251.413V14.043H245.169V64.401V64.396ZM331.801 24.0625H339.093V16.1911H331.801V24.0625ZM357.526 58.9782C356.393 59.0933 355.708 59.1534 355.479 59.1534C355.156 59.1534 354.898 59.0583 354.714 58.873C354.531 58.6877 354.436 58.4324 354.436 58.1019C354.436 57.8716 354.496 57.1806 354.61 56.0389C354.724 54.8972 354.784 53.1347 354.784 50.7612V33.361H363.69L361.937 28.0333H354.789V18.2391H348.545V28.0283H341.755V33.356H348.545V52.5038C348.545 56.5146 349.519 59.4989 351.461 61.4568C353.403 63.4146 356.363 64.396 360.342 64.396H365.2V58.8029H362.771C360.412 58.8029 358.663 58.863 357.531 58.9782H357.526ZM394.059 28.0283L383.723 58.5425C383.583 58.9181 383.365 59.4088 382.655 59.4088C381.944 59.4088 381.726 58.9181 381.587 58.5425L371.25 28.0283H364.882L376.853 64.396H381.085C381.363 64.396 381.572 64.4211 381.711 64.4661C381.85 64.5112 381.964 64.6264 382.059 64.8166C382.242 65.097 382.217 65.5177 381.989 66.0735L380.047 71.3862C379.769 72.0872 379.237 72.4377 378.452 72.4377C378.174 72.4377 377.529 72.3776 376.51 72.2624C375.492 72.1473 374.176 72.0872 372.556 72.0872H367.49V77.6803H374.151C378.035 77.6803 380.375 77.0143 382.386 75.6874C384.398 74.3605 385.958 72.0171 387.07 68.6572L400 29.4203V28.0233H394.059V28.0283ZM311.406 41.5979L301.626 28.0283H294.756V29.4253L306.478 45.1631L292.188 62.999V64.396H299.197L310.576 49.7798L321.191 64.396H327.922V62.999L315.504 46.2146L328.965 29.5004V28.0333H321.956L311.411 41.603L311.406 41.5979ZM332.467 64.396H338.71V28.0333H332.467V64.401V64.396ZM292.471 52.8543C291.592 56.2592 289.799 59.2085 287.097 61.7021C284.39 64.1957 280.515 65.4425 275.474 65.4425C271.679 65.4425 268.341 64.6614 265.45 63.0991C262.559 61.5369 260.329 59.3137 258.754 56.4195C257.18 53.5303 256.395 50.1253 256.395 46.2096C256.395 42.294 257.16 38.889 258.685 35.9998C260.21 33.1106 262.35 30.8824 265.102 29.3201C267.854 27.7579 271.078 26.9767 274.778 26.9767C278.479 26.9767 281.543 27.7479 284.111 29.2851C286.679 30.8223 288.597 32.8653 289.868 35.404C291.14 37.9477 291.776 40.7317 291.776 43.7611V47.9572H262.986C263.215 51.5925 264.432 54.4867 266.627 56.6298C268.823 58.7729 271.773 59.8494 275.474 59.8494C278.479 59.8494 280.783 59.2335 282.378 57.9967C283.972 56.7599 285.14 55.0475 285.88 52.8543H292.471ZM263.056 42.7146H284.842C284.842 39.545 284.032 37.0614 282.413 35.2638C280.793 33.4712 278.25 32.5699 274.783 32.5699C271.545 32.5699 268.897 33.4461 266.841 35.1937C264.784 36.9412 263.523 39.4498 263.061 42.7096L263.056 42.7146Z"
+                                    class="block fill-foreground"
+                                  ></path>
+                                  <path
+                                    d="M38.6936 29.9832L12.8633 5.88983V29.9832H38.6936Z M39.5005 29.9832L65.3308 5.88983V29.9832H39.5005Z M38.7227 2L38.7227 90.2534 M64.5246 53.7584L38.6943 30.0068V62.9404L64.5246 85.9724V53.7584Z M12.8924 53.7584L38.7227 30.0068V62.9404L12.8924 85.9724V53.7584Z M2.28711 29.9832V64.4236H12.8863V53.7348L38.7226 29.9832H2.28711Z M38.6943 30.3L64.5246 54.0515V64.7403H75.2872V30.3L38.6943 30.3Z"
+                                    class="stroke-super transition-all duration-300"
+                                    stroke-width="4.30504"
+                                    stroke-miterlimit="10"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="gap-x-sm flex items-center"></div>
+                          </div>
+                          <div id="welcome-elements" class="static w-full grow flex-col items-center justify-center md:mt-0 md:flex z-10 border-subtlest ring-subtlest divide-subtlest bg-transparent">
+                            <div class="px-md relative flex size-full flex-col justify-center md:h-auto md:px-0">
+                              <div class="mb-lg bottom-0 flex w-full items-center justify-center pb-3 text-center md:absolute">
+                                <div style="opacity: 1">
+                                  <div class="h-auto group w-64">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3913.07 632">
+                                      <path
+                                        class="block fill-foreground"
+                                        d="M972.21,137.43h30.23v62.43h-39.13c-30.66,0-53.52,7.39-68.68,22.22-15.07,14.78-22.64,39.1-22.64,72.9v204.71h-61.76V138.85h61.76v57.58c0,3.25,1.63,4.85,4.8,4.85,1.81,0,3.17-.45,4.14-1.38.97-.94,1.8-2.76,2.77-5.57,11.89-37.9,41.46-56.87,88.55-56.87h-.04v-.04ZM1383.06,214.78c16.21,28.9,24.36,63.73,24.36,104.43s-8.11,75.53-24.36,104.43c-16.26,28.9-37.32,50.54-63.18,64.88-25.86,14.34-53.66,21.51-83.39,21.51-58.59,0-99.78-23.6-123.57-70.81-1.81-3.7-4.14-5.57-6.87-5.57s-4.14,1.38-4.14,4.19v193.63h-61.77V138.81h61.77v61.77c0,2.76,1.36,4.19,4.14,4.19s5.02-1.83,6.87-5.57c23.79-47.2,64.98-70.81,123.57-70.81,29.73,0,57.53,7.17,83.39,21.51,25.86,14.34,46.88,35.98,63.18,64.88ZM1345.7,319.21c0-42.57-11.32-75.75-33.97-99.57-22.64-23.83-52.46-35.72-89.6-35.72s-66.96,11.93-89.61,35.72c-22.68,23.82-30.96,57.04-30.96,99.57s8.32,75.75,30.96,99.57c22.65,23.87,52.51,35.72,89.61,35.72s66.96-11.93,89.6-35.72c22.65-23.78,33.97-57.04,33.97-99.57ZM342.87,215.31c16.21,28.9,24.36,63.73,24.36,104.43s-8.11,75.53-24.36,104.43c-16.26,28.9-37.31,50.55-63.17,64.88-25.86,14.34-53.66,21.51-83.39,21.51-58.59,0-99.78-23.6-123.57-70.81-1.8-3.7-4.14-5.57-6.87-5.57s-4.14,1.38-4.14,4.18v193.63H0V139.34h61.76v61.76c0,2.76,1.36,4.19,4.14,4.19s5.02-1.83,6.87-5.57c23.79-47.2,64.98-70.81,123.57-70.81,29.74,0,57.53,7.17,83.39,21.51,25.86,14.34,46.87,35.98,63.17,64.88h-.05ZM305.46,319.74c0-42.57-11.32-75.75-33.96-99.57-22.65-23.78-52.51-35.72-89.61-35.72s-66.96,11.93-89.6,35.72c-22.64,23.87-30.97,57.05-30.97,99.57s8.33,75.75,30.97,99.58c22.64,23.87,52.47,35.71,89.6,35.71s66.96-11.93,89.61-35.71c22.64-23.78,33.96-57.05,33.96-99.58ZM701.07,385.07h65.2c-8.68,33.8-26.43,63.05-53.17,87.77-26.79,24.76-65.11,37.1-115.02,37.1-37.53,0-70.57-7.75-99.16-23.25-28.59-15.5-50.66-37.54-66.26-66.26-15.59-28.68-23.35-62.43-23.35-101.31s7.58-72.63,22.64-101.31c15.07-28.68,36.26-50.77,63.48-66.26,27.23-15.5,59.12-23.25,95.73-23.25s66.96,7.66,92.33,22.89c25.42,15.27,44.36,35.54,56.96,60.7,12.6,25.25,18.85,52.86,18.85,82.92v41.64h-284.85c2.24,36.07,14.32,64.8,36.03,86.04,21.72,21.29,50.92,31.93,87.54,31.93,29.73,0,52.55-6.1,68.33-18.39,15.77-12.29,27.31-29.26,34.67-51.03l.04.09ZM473.18,284.47h215.55c0-31.44-8.02-56.11-24.05-73.92-16.03-17.77-41.19-26.72-75.51-26.72-32.03,0-58.24,8.68-78.59,26.05-20.35,17.32-32.82,42.22-37.4,74.59ZM1457.24,499.61h61.81V0h-61.81v499.65-.04ZM2325.88,99.4h72.17V21.24h-72.17v78.15ZM2592.35,445.86c-11.22,1.16-18.01,1.74-20.24,1.74-3.18,0-5.79-.93-7.58-2.81-1.82-1.83-2.77-4.36-2.77-7.66,0-2.27.59-9.13,1.76-20.48,1.09-11.31,1.71-28.81,1.71-52.37v-172.65h88.1l-17.36-52.86h-70.71V41.59h-61.74v97.13h-67.2v52.86h67.2v189.97c0,39.81,9.65,69.43,28.83,88.84,19.21,19.42,48.51,29.17,87.91,29.17h48.05v-55.49h-24.05c-23.34,0-40.63.58-51.85,1.74l-.06.05ZM2965.71,138.76l-102.29,302.77c-1.35,3.74-3.53,8.6-10.51,8.6s-9.21-4.85-10.6-8.6l-102.29-302.77h-62.99l118.46,360.85h41.9c2.72,0,4.81.27,6.22.71,1.36.45,2.5,1.6,3.43,3.47,1.79,2.76,1.57,6.95-.71,12.47l-19.21,52.73c-2.77,6.95-8.02,10.42-15.76,10.42-2.77,0-9.16-.58-19.22-1.74-10.08-1.16-23.07-1.73-39.1-1.73h-50.14v55.48h65.9c38.45,0,61.58-6.59,81.5-19.77,19.92-13.18,35.33-36.43,46.33-69.73l127.94-389.3v-13.85h-58.86ZM2116.82,273.38l-96.8-134.62h-67.96v13.85l115.98,156.13-141.42,176.97v13.85h69.35l112.59-145.04,105.03,145.04h66.61v-13.85l-122.92-166.55,133.24-165.84v-14.56h-69.35l-104.32,134.62h-.03ZM2332.45,499.61h61.8V138.81h-61.8v360.84-.04ZM1925.78,385.07c-8.72,33.8-26.41,63.05-53.15,87.77-26.8,24.76-65.12,37.1-115.04,37.1-37.52,0-70.57-7.75-99.16-23.25-28.64-15.5-50.65-37.54-66.25-66.26-15.55-28.68-23.31-62.43-23.31-101.31s7.58-72.63,22.65-101.31c15.12-28.68,36.26-50.77,63.49-66.26,27.2-15.5,59.1-23.25,95.76-23.25s66.96,7.66,92.37,22.89c25.38,15.27,44.38,35.54,56.96,60.7,12.61,25.25,18.86,52.86,18.86,82.92v41.64h-284.88c2.29,36.07,14.3,64.8,36.04,86.04,21.71,21.29,50.92,31.93,87.53,31.93,29.73,0,52.56-6.1,68.32-18.39,15.76-12.29,27.31-29.26,34.62-51.03h65.24l-.05.09ZM1634.25,284.47h215.55c0-31.44-8.02-56.11-24-73.92-16.06-17.77-41.19-26.72-75.52-26.72-32.04,0-58.23,8.68-78.59,26.05-20.35,17.32-32.85,42.22-37.39,74.59h-.05Z"
+                                      ></path>
+                                      <g>
+                                        <path
+                                          class="fill-super"
+                                          d="M3355.84,188.2c-34.07-64.39-131.07-79.63-178.65-27.45-1.45,1.53-4.03.51-4.03-1.6v-20.46s-51.68,0-51.68,0v360.92h51.68v-137.9c0-2.11,2.57-3.13,4.03-1.6,17.98,18.93,43.42,31.52,75.79,31.52,72.2.47,121.88-58.16,120.25-131.21,0-28.27-5.85-52.57-17.39-72.23ZM3321.56,260.43c0,26.4-7.05,50.24-20.94,64.92h0c-25.21,28.94-83.76,28.65-109.2,0-27.18-27.93-27.44-101.65,0-129.38,25.44-29.25,83.94-29.55,109.17-.04,13.94,14.4,20.97,38.06,20.98,64.5Z"
+                                        ></path>
+                                        <path
+                                          class="fill-super"
+                                          d="M3678.1,499.61h-438.05v-48.22h438.05c33.41,0,64.39-7.45,92.07-22.16,29.4-15.46,53.58-39.15,70.02-68.56l.08-.14c16.31-28.72,24.58-62.4,24.58-100.11s-8.26-71.36-24.56-100.07l-.08-.13c-16.46-29.43-40.64-53.13-69.93-68.54-27.79-14.76-58.78-22.22-92.19-22.22h-555.91V21.24h555.91c41.39,0,79.99,9.36,114.73,27.81,37.45,19.7,68.41,49.99,89.43,87.55,20.45,36.05,30.82,77.7,30.82,123.82s-10.38,87.81-30.84,123.86c-21,37.53-51.96,67.81-89.53,87.57-34.63,18.4-73.22,27.75-114.61,27.75Z"
+                                        ></path>
+                                        <path
+                                          class="fill-super"
+                                          d="M3784.19,189.62c-42.92-80.72-177.41-80.62-220.65.03-10.91,19.63-16.45,43.44-16.45,70.78-1.52,77.12,51.01,131.73,127,131.21,75.9.53,128.27-54.63,127-131.21,0-27.33-5.69-51.15-16.91-70.8ZM3749.42,260.43c0,26.4-7.05,50.24-20.94,64.92h0c-25.21,28.94-83.76,28.65-109.2,0-27.17-27.93-27.44-101.65,0-129.38,25.44-29.25,83.94-29.55,109.17-.04,13.94,14.4,20.97,38.06,20.98,64.5Z"
+                                        ></path>
+                                        <path
+                                          class="fill-super"
+                                          d="M3515.38,135.16c-16.77,0-30.24,2.85-40.05,8.48-5.78,3.15-11.11,8.68-16.12,16.74-1.24,2-4.32,1.13-4.32-1.22v-20.46s-51.67,0-51.67,0v246.1h51.67v-140.34c0-20.57,4.43-35.36,13.17-43.97,16.17-16.75,48.45-12.5,72.26-13v-52.31h-24.94Z"
+                                        ></path>
+                                      </g>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="main-input-container" class="w-full">
+                              <div class="relative">
+                                <div class="relative rounded-2xl border-subtlest ring-subtlest divide-subtlest bg-subtler">
+                                  <span class="grow block"
+                                    ><div class="relative rounded-2xl">
+                                      <div
+                                        class="bg-raised w-full outline-none flex items-center border rounded-2xl dark:bg-offset duration-75 transition-all border-subtler shadow-sm dark:shadow-md shadow-super/10 dark:shadow-black/10 px-0 pt-3 pb-3 gap-y-md grid items-center"
+                                      >
+                                        <div class="px-3.5 grid-rows-1fr-auto grid grid-cols-3">
+                                          <div class="overflow-hidden relative flex h-full w-full col-start-1 col-end-4 pb-3">
+                                            <div class="w-full" style="min-height: 3em">
+                                              <div
+                                                class="overflow-auto max-h-[45vh] lg:max-h-[40vh] sm:max-h-[25vh] outline-none font-sans resize-none caret-super selection:bg-super/30 selection:text-foreground dark:selection:bg-super/10 dark:selection:text-super text-foreground bg-transparent placeholder-quieter placeholder:select-none scrollbar-subtle size-full"
+                                                contenteditable="true"
+                                                id="ask-input"
+                                                role="textbox"
+                                                spellcheck="true"
+                                                aria-placeholder="Ask anything or @mention a Space"
+                                                data-lexical-editor="true"
+                                                style="user-select: text; white-space: pre-wrap; word-break: break-word"
+                                              ></div>
+                                              <div aria-hidden="true"><div class="absolute inset-0 pointer-events-none select-none text-quieter">Ask anything or @mention a Space</div></div>
+                                            </div>
+                                          </div>
+                                          <div class="gap-sm flex col-start-1 row-start-2 -ml-two">
+                                            <div class="gap-xs flex items-center">
+                                              <div role="radiogroup" aria-required="false" dir="ltr" data-state="closed" class="group relative isolate flex h-fit focus:outline-none" tabindex="0" style="outline: none">
+                                                <div class="absolute inset-0 bg-super/10 dark:bg-black/[0.18] dark:border dark:border-black/[0.04] rounded-[10px] transition-colors duration-300"></div>
+                                                <div class="p-two flex shrink-0 items-center">
+                                                  <span
+                                                    ><button
+                                                      type="button"
+                                                      role="radio"
+                                                      aria-checked="true"
+                                                      data-state="checked"
+                                                      value="search"
+                                                      aria-label="Search"
+                                                      class="segmented-control group/segmented-control relative focus:outline-none"
+                                                      tabindex="-1"
+                                                      data-radix-collection-item=""
+                                                    >
+                                                      <div
+                                                        data-state="checked"
+                                                        class="pointer-events-none absolute inset-0 z-0 block bg-white dark:bg-black dark:bg-gradient-to-b dark:from-super/20 dark:to-super/20 border-super dark:border-super/30 border rounded-lg shadow-super/30 dark:shadow-super/5 shadow-[0_1px_3px_0] dark:text-super transition-colors duration-300 group-focus-visible/segmented-control:border-dashed"
+                                                        style="opacity: 1"
+                                                      ></div>
+                                                      <div data-testid="search-mode-search">
+                                                        <div class="relative z-10 flex h-8 min-w-9 items-center justify-center py-xs gap-xs px-2.5">
+                                                          <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="16"
+                                                            height="16"
+                                                            viewBox="0 0 24 24"
+                                                            color="currentColor"
+                                                            class="tabler-icon transition-colors duration-300 text-super"
+                                                            fill="currentColor"
+                                                            fill-rule="evenodd"
+                                                          >
+                                                            <path
+                                                              d="M11 2.125a8.378 8.378 0 0 1 8.375 8.375c0 .767-.1 1.508-.304 2.22l-.029.085a.875.875 0 0 1-1.653-.566l.054-.206c.12-.486.182-.996.182-1.533A6.628 6.628 0 0 0 11 3.875 6.628 6.628 0 0 0 4.375 10.5a6.628 6.628 0 0 0 10.402 5.445c.943-.654 2.242-.664 3.153.109l.176.165.001.002 4.066 4.184a.875.875 0 0 1-1.256 1.22l-4.064-4.185-.104-.088c-.263-.183-.646-.197-.975.03l-.001.003A8.378 8.378 0 0 1 2.625 10.5 8.378 8.378 0 0 1 11 2.125Zm0 7.09a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"
+                                                            ></path>
+                                                          </svg>
+                                                        </div>
+                                                      </div></button></span
+                                                  ><span
+                                                    ><button
+                                                      type="button"
+                                                      role="radio"
+                                                      aria-checked="false"
+                                                      data-state="unchecked"
+                                                      value="research"
+                                                      aria-label="Research"
+                                                      class="segmented-control group/segmented-control relative focus:outline-none"
+                                                      tabindex="-1"
+                                                      data-radix-collection-item=""
+                                                    >
+                                                      <div data-testid="search-mode-research">
+                                                        <div class="relative z-10 flex h-8 min-w-9 items-center justify-center">
+                                                          <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="16"
+                                                            height="16"
+                                                            viewBox="0 0 24 24"
+                                                            color="currentColor"
+                                                            class="tabler-icon transition-colors duration-300 text-quiet group-hover/segmented-control:text-foreground"
+                                                            fill="currentColor"
+                                                            fill-rule="evenodd"
+                                                          >
+                                                            <path
+                                                              d="M8.175 13.976a.876.876 0 0 1 1.172-.04l.065.061.582.59c.196.194.395.388.596.576l.39.358c1.942 1.753 3.844 2.937 5.357 3.477.81.29 1.444.369 1.884.31.404-.055.61-.216.731-.446.135-.256.209-.678.116-1.31-.08-.546-.275-1.191-.59-1.91l-.141-.313-.034-.083a.875.875 0 0 1 1.575-.741l.042.079.161.353c.36.823.61 1.623.719 2.362.122.836.071 1.675-.3 2.38-.431.818-1.186 1.247-2.044 1.363-.823.111-1.756-.056-2.707-.396-1.912-.681-4.17-2.154-6.357-4.207a30.378 30.378 0 0 1-.63-.61l-.608-.615-.058-.068a.875.875 0 0 1 .079-1.17Zm.624-5.822a.876.876 0 0 1 1.216 1.258c-.396.383-.788.775-1.165 1.178-1.95 2.077-3.26 4.133-3.835 5.747-.29.81-.37 1.444-.31 1.884.055.404.215.61.444.731l.104.048c.261.103.654.149 1.207.068.623-.09 1.378-.333 2.224-.731a.875.875 0 0 1 .745 1.583c-.948.446-1.871.756-2.716.88-.784.114-1.57.078-2.246-.234l-.134-.066c-.817-.431-1.246-1.186-1.362-2.044-.112-.823.056-1.756.395-2.707.64-1.792 1.973-3.889 3.83-5.945l.377-.411c.402-.43.816-.843 1.226-1.239Zm8.5-4.954c.832-.122 1.67-.073 2.372.302h-.001c.814.432 1.243 1.185 1.36 2.042.11.823-.057 1.756-.396 2.707-.682 1.911-2.154 4.17-4.207 6.356h-.001c-.403.429-.818.846-1.236 1.236l-.068.057a.875.875 0 0 1-1.127-1.336l.582-.562c.193-.193.385-.39.573-.592l.359-.39c1.752-1.942 2.937-3.844 3.476-5.357.29-.811.37-1.444.31-1.884-.055-.404-.216-.61-.446-.731l-.003-.002c-.248-.132-.663-.207-1.293-.114-.62.09-1.37.332-2.208.73l-.083.034a.876.876 0 0 1-.667-1.615l.351-.161c.819-.36 1.616-.612 2.353-.72Zm-5.292 7.507a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6ZM5.544 2.971c.823-.112 1.756.056 2.707.395 1.911.682 4.17 2.154 6.356 4.207.214.201.426.406.632.612l.604.625.057.068a.875.875 0 0 1-1.271 1.19l-.065-.063-.562-.582c-.193-.193-.39-.385-.592-.573-2.077-1.95-4.133-3.26-5.747-3.835-.811-.29-1.444-.37-1.884-.31-.404.055-.61.215-.731.444l-.002.004c-.132.248-.207.664-.114 1.294.08.543.275 1.184.588 1.898l.142.31.034.083a.875.875 0 0 1-1.572.746l-.043-.079-.161-.352c-.36-.819-.612-1.615-.72-2.352-.122-.832-.073-1.67.302-2.372.431-.814 1.185-1.242 2.042-1.358Z"
+                                                            ></path>
+                                                          </svg>
+                                                        </div>
+                                                      </div></button></span
+                                                  ><span
+                                                    ><button
+                                                      type="button"
+                                                      role="radio"
+                                                      aria-checked="false"
+                                                      data-state="unchecked"
+                                                      value="studio"
+                                                      aria-label="Labs"
+                                                      class="segmented-control group/segmented-control relative focus:outline-none"
+                                                      tabindex="-1"
+                                                      data-radix-collection-item=""
+                                                    >
+                                                      <div data-testid="search-mode-studio">
+                                                        <div class="relative z-10 flex h-8 min-w-9 items-center justify-center">
+                                                          <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="16"
+                                                            height="16"
+                                                            viewBox="0 0 24 24"
+                                                            color="currentColor"
+                                                            class="tabler-icon transition-colors duration-300 text-quiet group-hover/segmented-control:text-foreground"
+                                                            fill="currentColor"
+                                                            fill-rule="evenodd"
+                                                          >
+                                                            <path
+                                                              d="M11.92 1.889a7.035 7.035 0 0 1 7.034 7.032 7.033 7.033 0 0 1-3.694 6.184v3.053a.876.876 0 0 1-.875.875h-4.052v1.317h4.052l.089.003a.876.876 0 0 1 0 1.742l-.09.005H9.459a.876.876 0 0 1-.875-.875v-3.067c0-.483.392-.875.875-.875h4.052v-2.722c0-.347.205-.662.523-.801l.343-.164a5.286 5.286 0 0 0 2.828-4.675 5.285 5.285 0 0 0-5.283-5.282A5.285 5.285 0 0 0 6.639 8.92a5.286 5.286 0 0 0 2.828 4.675l.342.164.08.04a.875.875 0 0 1-.698 1.595l-.084-.032-.23-.105A7.036 7.036 0 0 1 4.89 8.92a7.035 7.035 0 0 1 7.032-7.032Zm.014 5.732a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"
+                                                            ></path>
+                                                          </svg>
+                                                        </div>
+                                                      </div></button></span
+                                                  ><span
+                                                    ><button
+                                                      type="button"
+                                                      role="radio"
+                                                      aria-checked="false"
+                                                      data-state="unchecked"
+                                                      value="study"
+                                                      aria-label="Study"
+                                                      class="segmented-control group/segmented-control relative focus:outline-none"
+                                                      tabindex="-1"
+                                                      data-radix-collection-item=""
+                                                    >
+                                                      <div data-testid="search-mode-study">
+                                                        <div class="relative z-10 flex h-8 min-w-9 items-center justify-center">
+                                                          <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="16"
+                                                            height="16"
+                                                            viewBox="0 0 24 24"
+                                                            color="currentColor"
+                                                            class="tabler-icon transition-colors duration-300 text-quiet group-hover/segmented-control:text-foreground"
+                                                            fill="currentColor"
+                                                            fill-rule="evenodd"
+                                                          >
+                                                            <path
+                                                              d="M12 2C12.4599 2 12.833 2.37307 12.833 2.83301V18.5176L17.0029 14.9473V5.6748L15.918 6.75488C15.5918 7.07873 15.0644 7.0769 14.7402 6.75098C14.4163 6.42487 14.4182 5.89747 14.7441 5.57324L17.249 3.08105L17.3438 3.00098C17.5762 2.83052 17.8846 2.79036 18.1562 2.90332C18.4666 3.0325 18.6688 3.33569 18.6689 3.67188V15.3311C18.6689 15.5743 18.5618 15.8056 18.377 15.9639L14.2529 19.4951H20.334V6.16406C20.334 5.70426 20.7072 5.33127 21.167 5.33105C21.6269 5.33105 22 5.70412 22 6.16406V20.3281C21.9999 20.788 21.6269 21.1611 21.167 21.1611H2.83301C2.37314 21.1611 2.00012 20.788 2 20.3281V6.16406C2 5.70412 2.37307 5.33105 2.83301 5.33105C3.29279 5.33124 3.66504 5.70424 3.66504 6.16406V19.4951H9.74707L5.62207 15.9639C5.43739 15.8057 5.33105 15.5742 5.33105 15.3311V3.67188L5.33984 3.54688C5.38309 3.26217 5.57241 3.01627 5.84375 2.90332C6.1542 2.77424 6.51245 2.84416 6.75098 3.08105L9.25586 5.57324L9.36328 5.70312C9.57757 6.02568 9.54328 6.4656 9.25977 6.75098C8.97578 7.03648 8.53579 7.07335 8.21191 6.86035L8.08203 6.75488L6.99707 5.6748V14.9473L11.167 18.5176V2.83301C11.167 2.37308 11.5401 2.00002 12 2Z"
+                                                            ></path>
+                                                          </svg>
+                                                        </div>
+                                                      </div></button
+                                                  ></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="flex items-center justify-self-end col-start-3 row-start-2">
+                                            <span
+                                              ><button
+                                                data-testid="sources-switcher-button"
+                                                type="button"
+                                                class="focus-visible:bg-subtle hover:bg-subtle text-quiet hover:text-foreground dark:hover:bg-subtle px-[4px] font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 aspect-[9/8]"
+                                                data-state="closed"
+                                              >
+                                                <div class="flex items-center min-w-0 gap-two justify-center">
+                                                  <div>
+                                                    <div class="isolate my-xs flex items-center">
+                                                      <div class="flex items-center">
+                                                        <div class="relative flex items-center justify-center rounded-full size-5" style="z-index: 1">
+                                                          <div class="flex size-5 items-center justify-center">
+                                                            <svg
+                                                              xmlns="http://www.w3.org/2000/svg"
+                                                              width="16"
+                                                              height="16"
+                                                              viewBox="0 0 24 24"
+                                                              fill="none"
+                                                              stroke="currentColor"
+                                                              stroke-width="2"
+                                                              stroke-linecap="round"
+                                                              stroke-linejoin="round"
+                                                              class="tabler-icon tabler-icon-world tabler-icon"
+                                                            >
+                                                              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                                              <path d="M3.6 9h16.8"></path>
+                                                              <path d="M3.6 15h16.8"></path>
+                                                              <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+                                                              <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+                                                            </svg>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div></button
+                                            ></span>
+                                            <div style="opacity: 1">
+                                              <span
+                                                ><button
+                                                  aria-label="Choose a model"
+                                                  type="button"
+                                                  class="focus-visible:bg-subtle hover:bg-subtle text-quiet hover:text-foreground dark:hover:bg-subtle max-w-24 sm:max-w-none font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 aspect-[9/8]"
+                                                  data-state="closed"
+                                                >
+                                                  <div class="flex items-center min-w-0 gap-two justify-center">
+                                                    <div class="flex shrink-0 items-center justify-center size-4">
+                                                      <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="16"
+                                                        height="16"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        class="tabler-icon tabler-icon-cpu tabler-icon"
+                                                      >
+                                                        <path d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z"></path>
+                                                        <path d="M9 9h6v6h-6z"></path>
+                                                        <path d="M3 10h2"></path>
+                                                        <path d="M3 14h2"></path>
+                                                        <path d="M10 3v2"></path>
+                                                        <path d="M14 3v2"></path>
+                                                        <path d="M21 10h-2"></path>
+                                                        <path d="M21 14h-2"></path>
+                                                        <path d="M14 21v-2"></path>
+                                                        <path d="M10 21v-2"></path>
+                                                      </svg>
+                                                    </div>
+                                                  </div></button
+                                              ></span>
+                                            </div>
+                                            <div class="flex items-center">
+                                              <div data-state="closed" class="">
+                                                <div style="opacity: 1">
+                                                  <span
+                                                    ><button
+                                                      aria-label="Attach files"
+                                                      type="button"
+                                                      class="focus-visible:bg-subtle hover:bg-subtle text-quiet hover:text-foreground dark:hover:bg-subtle font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 aspect-[9/8]"
+                                                      data-state="closed"
+                                                    >
+                                                      <div class="flex items-center min-w-0 gap-two justify-center">
+                                                        <div class="flex shrink-0 items-center justify-center size-4">
+                                                          <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="16"
+                                                            height="16"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="tabler-icon tabler-icon-paperclip tabler-icon"
+                                                          >
+                                                            <path d="M15 7l-6.5 6.5a1.5 1.5 0 0 0 3 3l6.5 -6.5a3 3 0 0 0 -6 -6l-6.5 6.5a4.5 4.5 0 0 0 9 9l6.5 -6.5"></path>
+                                                          </svg>
+                                                        </div>
+                                                      </div></button
+                                                  ></span>
+                                                </div>
+                                                <input
+                                                  multiple=""
+                                                  accept=".bash,.bat,.c,.coffee,.conf,.config,.cpp,.cs,.css,.csv,.cxx,.dart,.diff,.doc,.docx,.fish,.go,.h,.hpp,.htm,.html,.in,.ini,.ipynb,.java,.js,.json,.jsx,.ksh,.kt,.kts,.latex,.less,.log,.lua,.m,.markdown,.md,.pdf,.php,.pl,.pm,.pptx,.py,.r,.R,.rb,.rmd,.rs,.scala,.sh,.sql,.swift,.t,.tex,.text,.toml,.ts,.tsx,.txt,.xlsx,.xml,.yaml,.yml,.zsh,.jpeg,.jpg,.jpe,.jp2,.png,.gif,.bmp,.tiff,.tif,.svg,.webp,.ico,.avif,.heic,.heif,.mp3,.wav,.aiff,.ogg,.flac,.mp4,.mpeg,.mov,.avi,.flv,.mpg,.webm,.wmv,.3gp"
+                                                  type="file"
+                                                  style="display: none"
+                                                />
+                                              </div>
+                                            </div>
+                                            <div class="relative">
+                                              <button
+                                                aria-label="Dictation"
+                                                type="button"
+                                                class="focus-visible:bg-subtle hover:bg-subtle text-quiet hover:text-foreground dark:hover:bg-subtle font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 aspect-[9/8]"
+                                                data-state="closed"
+                                              >
+                                                <div class="flex items-center min-w-0 gap-two justify-center">
+                                                  <div class="flex shrink-0 items-center justify-center size-4">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="tabler-icon tabler-icon-microphone-filled tabler-icon">
+                                                      <path
+                                                        d="M19 9a1 1 0 0 1 1 1a8 8 0 0 1 -6.999 7.938l-.001 2.062h3a1 1 0 0 1 0 2h-8a1 1 0 0 1 0 -2h3v-2.062a8 8 0 0 1 -7 -7.938a1 1 0 1 1 2 0a6 6 0 0 0 12 0a1 1 0 0 1 1 -1m-7 -8a4 4 0 0 1 4 4v5a4 4 0 1 1 -8 0v-5a4 4 0 0 1 4 -4"
+                                                      ></path>
+                                                    </svg>
+                                                  </div>
+                                                </div>
+                                              </button>
+                                            </div>
+                                            <div class="ml-2">
+                                              <button
+                                                id="chat-submit-button"
+                                                aria-label="Submit"
+                                                type="button"
+                                                class="bg-super text-inverse hover:opacity-80 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 aspect-[9/8]"
+                                                data-state="closed"
+                                              >
+                                                <div class="flex items-center min-w-0 gap-two justify-center">
+                                                  <div class="flex shrink-0 items-center justify-center size-4">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" color="currentColor" class="tabler-icon" fill="currentColor" fill-rule="evenodd">
+                                                      <path
+                                                        d="M0 12.6663C0 13.4018 0.59792 13.9997 1.33333 13.9997C2.06875 13.9997 2.66667 13.4018 2.66667 12.6663V11.333C2.66667 10.5975 2.06875 9.99967 1.33333 9.99967C0.59792 9.99967 0 10.5975 0 11.333V12.6663ZM6.66667 5.33301C7.40213 5.33301 8 5.93087 8 6.66634V17.333C8 18.0685 7.40213 18.6663 6.66667 18.6663C5.9312 18.6663 5.33333 18.0685 5.33333 17.333V6.66634C5.33333 5.93087 5.9312 5.33301 6.66667 5.33301ZM10.6667 21.333C10.6667 22.0685 11.2645 22.6663 12 22.6663C12.7355 22.6663 13.3333 22.0685 13.3333 21.333V2.66634C13.3333 1.93093 12.7355 1.33301 12 1.33301C11.2645 1.33301 10.6667 1.93093 10.6667 2.66634V21.333ZM17.3333 5.33301C18.0688 5.33301 18.6667 5.93087 18.6667 6.66634V17.333C18.6667 18.0685 18.0688 18.6663 17.3333 18.6663C16.5979 18.6663 16 18.0685 16 17.333V6.66634C16 5.93087 16.5979 5.33301 17.3333 5.33301ZM24 11.333C24 10.5975 23.4021 9.99967 22.6667 9.99967C21.9312 9.99967 21.3333 10.5975 21.3333 11.333V12.6663C21.3333 13.4018 21.9312 13.9997 22.6667 13.9997C23.4021 13.9997 24 13.4018 24 12.6663V11.333Z"
+                                                      ></path>
+                                                    </svg>
+                                                  </div>
+                                                </div>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div data-type="portal"></div></div
+                                  ></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="relative w-full">
+                              <div class="mt-lg absolute w-full">
+                                <div class="animate-in fade-in duration-300">
+                                  <div class="gap-md grid grid-cols-1">
+                                    <div class="gap-sm flex h-[32px] flex-row flex-wrap justify-center overflow-hidden">
+                                      <div class="relative col-span-2 row-span-1">
+                                        <div>
+                                          <div style="opacity: 1; transform: none">
+                                            <button
+                                              type="button"
+                                              class="border border-subtler text-quiet md:hover:border-subtle md:hover:text-quiet hover:bg-subtler bg-base font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 px-2.5"
+                                            >
+                                              <div class="flex items-center min-w-0 gap-two justify-center">
+                                                <div class="flex shrink-0 items-center justify-center size-4">
+                                                  <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="tabler-icon tabler-icon-heart tabler-icon"
+                                                  >
+                                                    <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+                                                  </svg>
+                                                </div>
+                                                <div class="relative truncate text-center px-1 leading-loose -mb-px">Health</div>
+                                              </div>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="relative col-span-2 row-span-1">
+                                        <div>
+                                          <div style="opacity: 1; transform: none">
+                                            <button
+                                              type="button"
+                                              class="border border-subtler text-quiet md:hover:border-subtle md:hover:text-quiet hover:bg-subtler bg-base font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 px-2.5"
+                                            >
+                                              <div class="flex items-center min-w-0 gap-two justify-center">
+                                                <div class="flex shrink-0 items-center justify-center size-4">
+                                                  <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="tabler-icon tabler-icon-location tabler-icon"
+                                                  >
+                                                    <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
+                                                  </svg>
+                                                </div>
+                                                <div class="relative truncate text-center px-1 leading-loose -mb-px">Campus</div>
+                                              </div>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="relative col-span-2 row-span-1">
+                                        <div>
+                                          <div style="opacity: 1; transform: none">
+                                            <button
+                                              type="button"
+                                              class="border border-subtler text-quiet md:hover:border-subtle md:hover:text-quiet hover:bg-subtler bg-base font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 px-2.5"
+                                            >
+                                              <div class="flex items-center min-w-0 gap-two justify-center">
+                                                <div class="flex shrink-0 items-center justify-center size-4">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" color="currentColor" class="tabler-icon" fill="currentColor" fill-rule="evenodd">
+                                                    <path
+                                                      d="M21.23 7.134h-2.307V2.775a.772.772 0 0 0-.441-.697.795.795 0 0 0-.82.102l-4.893 4.072V1.775c0-.42-.348-.77-.769-.77-.42 0-.77.35-.77.77v4.487L6.339 2.18a.751.751 0 0 0-.82-.102.772.772 0 0 0-.441.697v4.36H2.769A.774.774 0 0 0 2 7.903v8.205c0 .42.349.77.77.77h2.307v4.359c0 .297.174.574.44.697a.73.73 0 0 0 .33.072.802.802 0 0 0 .491-.175l4.893-4.071v4.487c0 .42.348.77.769.77.42 0 .77-.35.77-.77V17.76l4.892 4.071a.802.802 0 0 0 .492.175.73.73 0 0 0 .328-.072.772.772 0 0 0 .441-.697v-4.36h2.308c.42 0 .769-.348.769-.769V7.903a.775.775 0 0 0-.77-.769Zm-3.845-2.718v2.718h-3.262l3.262-2.718Zm-10.77 0 3.262 2.718H6.615V4.416ZM3.538 15.34V8.673h6.606l-4.841 4.84a.768.768 0 0 0-.226.544v1.282H3.538Zm3.077.77v-1.734l4.616-4.615v5.99l-4.616 3.846v-3.488Zm10.77 3.487-4.616-3.847V9.76l4.616 4.616v5.22Zm3.076-4.257h-1.538v-1.282c0-.205-.082-.4-.226-.543l-4.84-4.841h6.605v6.666Z"
+                                                    ></path>
+                                                  </svg>
+                                                </div>
+                                                <div class="relative truncate text-center px-1 leading-loose -mb-px">Perplexity 101</div>
+                                              </div>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="relative col-span-2 row-span-1">
+                                        <div>
+                                          <div style="opacity: 1; transform: none">
+                                            <button
+                                              type="button"
+                                              class="border border-subtler text-quiet md:hover:border-subtle md:hover:text-quiet hover:bg-subtler bg-base font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 px-2.5"
+                                            >
+                                              <div class="flex items-center min-w-0 gap-two justify-center">
+                                                <div class="flex shrink-0 items-center justify-center size-4">
+                                                  <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="tabler-icon tabler-icon-article tabler-icon"
+                                                  >
+                                                    <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+                                                    <path d="M7 8h10"></path>
+                                                    <path d="M7 12h10"></path>
+                                                    <path d="M7 16h10"></path>
+                                                  </svg>
+                                                </div>
+                                                <div class="relative truncate text-center px-1 leading-loose -mb-px">Summarize</div>
+                                              </div>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="relative col-span-2 row-span-1">
+                                        <div>
+                                          <div style="opacity: 1; transform: none">
+                                            <button
+                                              type="button"
+                                              class="border border-subtler text-quiet md:hover:border-subtle md:hover:text-quiet hover:bg-subtler bg-base font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-lg cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 px-2.5"
+                                            >
+                                              <div class="flex items-center min-w-0 gap-two justify-center">
+                                                <div class="flex shrink-0 items-center justify-center size-4">
+                                                  <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="tabler-icon tabler-icon-box-multiple tabler-icon"
+                                                  >
+                                                    <path d="M7 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"></path>
+                                                    <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"></path>
+                                                  </svg>
+                                                </div>
+                                                <div class="relative truncate text-center px-1 leading-loose -mb-px">Flashcards</div>
+                                              </div>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="lg:py-sm lg:pr-sm erp-tab:py-0 erp-tab:pr-0 xl:erp-tab:pl-2 fixed inset-y-0 right-0 z-[100] flex h-full w-[60vw] min-w-0 flex-1 flex-col text-clip border-l shadow-lg transition-transform duration-200 xl:w-[calc(min(800px,_50vw))] xl:border-l-0 xl:shadow-none pointer-events-none w-0 translate-x-full opacity-0 border-subtlest ring-subtlest divide-subtlest bg-transparent"
+                  ></div>
+                </div>
+                <div class="rounded-inherit pointer-events-none absolute inset-0 z-20 hidden md:dark:block md:!border-y-0 md:!border-r-0 md:dark:border border-subtlest ring-subtlest divide-subtlest bg-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-md right-md m-sm fixed hidden md:block">
+        <div class="gap-sm flex items-center">
+          <div class="group relative">
+            <span class="inline-flex"
+              ><button
+                aria-label="Language"
+                type="button"
+                class="border border-subtler text-quiet md:hover:border-subtle md:hover:text-quiet hover:bg-subtler bg-base shadow-subtle font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-full cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 aspect-square"
+                data-state="closed"
+              >
+                <div class="flex items-center min-w-0 gap-two justify-center">
+                  <div class="flex shrink-0 items-center justify-center size-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="tabler-icon tabler-icon-language tabler-icon"
+                    >
+                      <path d="M4 5h7"></path>
+                      <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+                      <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+                      <path d="M12 20l4 -9l4 9"></path>
+                      <path d="M19.1 18h-6.2"></path>
+                    </svg>
+                  </div>
+                </div></button
+            ></span>
+          </div>
+          <span
+            ><button
+              aria-label="Help menu"
+              type="button"
+              class="border border-subtler text-quiet md:hover:border-subtle md:hover:text-quiet hover:bg-subtler bg-base shadow-subtle font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-out select-none items-center relative group/button font-semimedium justify-center text-center items-center rounded-full cursor-pointer active:scale-[0.97] active:duration-150 active:ease-outExpo origin-center whitespace-nowrap inline-flex text-sm h-8 aspect-square"
+              data-state="closed"
+            >
+              <div class="flex items-center min-w-0 gap-two justify-center">
+                <div class="flex shrink-0 items-center justify-center size-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="tabler-icon tabler-icon-question-mark tabler-icon"
+                  >
+                    <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path>
+                    <path d="M12 19l0 .01"></path>
+                  </svg>
+                </div>
+              </div></button
+          ></span>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://apis.google.com/js/api.js" id="google-drive-picker-gapi-script" gapi_processed="true"></script>
+    <div data-type="portal"></div>
+    <div data-type="portal"></div>
+    <div data-type="portal"></div>
+    <div data-type="portal"></div>
+    <script src="https://accounts.google.com/gsi/client" id="google-drive-picker-gis-script"></script>
+    <div data-type="portal"></div>
+    <iframe height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    <div data-type="portal"></div>
+    <script src="https://ah-cdn.merge.dev/initialize.js"></script>
+    <iframe
+      id="agent-handler-link-iframe"
+      height="100%"
+      width="100%"
+      src="https://ah-cdn.merge.dev/index.html"
+      style="display: none; position: fixed; inset: 0px; z-index: 2147483647; border-width: 0px; overflow: hidden auto; background-color: transparent"
+    ></iframe>
+    <div data-type="portal"></div>
+    <div data-type="portal"></div>
+    <div data-type="portal"></div>
+    <div data-type="portal"></div>
+    <iframe
+      name="__privateStripeMetricsController8550"
+      frameborder="0"
+      allowtransparency="true"
+      scrolling="no"
+      role="presentation"
+      allow="payment *"
+      src="https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html#url=https%3A%2F%2Fwww.perplexity.ai%2F&amp;title=Perplexity&amp;referrer=https%3A%2F%2Fwww.perplexity.ai%2F%3Flogin-source%3DoneTapHome%26login-new%3Dfalse&amp;muid=542cf911-16aa-4596-8fa9-96052a61bd3b7f5cb3&amp;sid=8b4c39a2-def5-43fb-a284-3207c376438ad943a0&amp;version=6&amp;preview=false&amp;__shared_params__[version]=v3"
+      aria-hidden="true"
+      tabindex="-1"
+      style="
+        border: none !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        width: 1px !important;
+        min-width: 100% !important;
+        overflow: hidden !important;
+        display: block !important;
+        visibility: hidden !important;
+        position: fixed !important;
+        height: 1px !important;
+        pointer-events: none !important;
+        user-select: none !important;
+      "
+    ></iframe>
+
+    <script src="chat_logic.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+okey saya udah pakai opsi B yang dari kamu, tapi kenapa sekarang tampilan utama, percakapan, layout, struktur dan style, beserta yang lain-nya engga sama dengan perplexity AI? dan banyak icon yang hilang?, maksud saya kalo beda dengan perplexity AI yang asli, jadinya aneh. dan saya mau kembalikan semuanya pada tampilan awal yang asli.
+
+kan saya sudah siapkan semua asset di file "index.html" yang lama pada percakapan yang di awal, kemudian kan harusnya pesan yang dihasilkan user dan AI wajib menggunakan full markdown dan highlight, pakai library yang sudah mendukung semuanya.
+
+kemduian saya mau ada animasi loading logo ukuran-ya kecil dengan animasi menggambar logo secara terus menerus dengan advance dan super halus biar sama dengan perplexity ai yang asli, yang kemudian akan hilang semua logo dan animasinya setelah pesan di tampikan, dan saya mau font user gradient tipis halus, super besar dan tebal.
+
+kemudian saya mau area percakapan dan tempat buat masukin pesan ke ai posisi-nya presisi ditengah sesuai layar dan menjadi agak lebar lagi area percakapan dan tempat buat masukin pesan ke ai-nya, serta hilangkan scrool bar-nya tapi user masih bisa scrool dengan aman dan nyaman.
+
+kemudian area percakapan harus ada di atas sesuai layar dan beri jarak agar tidak terlalu mepet ke atas layar, kemudian tempat buat saya masukin pesan ke AI akan bergeser ke bawah dan akan selalu tetap terlihat di layar, kemudian hilangkan logo besar dan tombol/fungsi aksi cepatnya.
+
+kemudian saya mau ketika mengetik pesan maka tombol voice mode akan berubah jadi fungsi kirim dan ketika percakapan sudah mulai percakapan maka ganti lagi dengan icon kirim lain-nya yang tersedia dikode file "index.html" yang lama.
