@@ -19,13 +19,14 @@ body.chat-active .scrollable-container {
 body.chat-active #main-input-container {
   position: fixed; /* Menempel permanen di viewport */
   bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background: #191a1a; /* Warna background gelap agar solid */
+  width: 95.5%;
+  background: linear-gradient(180deg, rgba(16, 14, 18, 0) 0%, #191a1a 30%);
   padding: 1rem 0 1.5rem 0;
   z-index: 50;
-  /* border-top: 1px solid #1f2121; */
+}
+
+body.chat-active #buat-tinggi {
+  min-height: 1.5em !important;
 }
 
 /* Area untuk menampilkan percakapan */
@@ -45,11 +46,11 @@ body.chat-active #main-input-container {
   overflow-y: auto;
   padding: 2rem 1rem;
   /* Beri ruang di bawah agar tidak tertutup area input */
-  padding-bottom: 150px;
+  padding-bottom: 165px;
 
   /* Sembunyikan scrollbar */
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 #chat-container::-webkit-scrollbar {
   display: none;
@@ -109,12 +110,12 @@ body.chat-active #main-input-container {
   z-index: 40;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 .scroll-arrow {
-  background-color: rgba(42, 42, 42, 0.8);
+  background-color: rgba(42, 42, 46, 0.8);
   color: white;
-  border: 1px solid #4b5563;
+  border: 1px solid #4a4a4f;
   border-radius: 50%;
   width: 36px;
   height: 36px;
@@ -125,18 +126,22 @@ body.chat-active #main-input-container {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: scale(0.9);
+  transform: translateY(10px);
 }
 .scroll-arrow.visible {
   opacity: 1;
   pointer-events: auto;
-  transform: scale(1);
+  transform: translateY(0);
 }
 .scroll-arrow:hover {
-  background-color: rgba(62, 62, 62, 0.9);
+  background-color: rgba(62, 62, 66, 0.9);
 }
 
 /* --- GAYA UNTUK MARKDOWN & HIGHLIGHT.JS --- */
+
+.prose {
+  max-width: 100% !important;
+}
 
 pre code.hljs {
   text-wrap: auto;
