@@ -115,13 +115,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollContainerHTML = `
             <div class="scroll-arrows-container">
                 <div id="scroll-up" class="scroll-arrow"><?xml version="1.0"?>
-<svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+<svg height="24" viewBox="0 0 48 48" width="24" xmlns="http://www.w3.org/2000/svg">
   <path d="M14 28l10-10 10 10z" fill="white"/>
   <path d="M0 0h48v48h-48z" fill="none"/>
 </svg>
 </div>
                 <div id="scroll-down" class="scroll-arrow"><?xml version="1.0"?>
-<svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+<svg height="24" viewBox="0 0 48 48" width="24" xmlns="http://www.w3.org/2000/svg">
   <path d="M14 20l10 10 10-10z" fill="white"/>
   <path d="M0 0h48v48h-48z" fill="none"/>
 </svg>
