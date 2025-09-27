@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Elemen-elemen ini adalah bagian dari welcome screen yang akan disembunyikan
   const welcomeLogo = document.querySelector(".static.w-full.grow .mb-lg.bottom-0");
-  const welcomeActions = document.querySelector(".static.w-full.grow .relative.w-full");
+  const welcomeActions = document.querySelector(".static.w-full.grow .relative.w-full .mt-lg.absolute");
 
   const scrollableContainer = document.querySelector(".scrollable-container");
 
@@ -114,8 +114,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatArea = document.getElementById("main-chat-area");
     const scrollContainerHTML = `
             <div class="scroll-arrows-container">
-                <div id="scroll-up" class="scroll-arrow">↑</div>
-                <div id="scroll-down" class="scroll-arrow">↓</div>
+                <div id="scroll-up" class="scroll-arrow"><?xml version="1.0"?>
+<svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+  <path d="M14 28l10-10 10 10z" fill="white"/>
+  <path d="M0 0h48v48h-48z" fill="none"/>
+</svg>
+</div>
+                <div id="scroll-down" class="scroll-arrow"><?xml version="1.0"?>
+<svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+  <path d="M14 20l10 10 10-10z" fill="white"/>
+  <path d="M0 0h48v48h-48z" fill="none"/>
+</svg>
+</div>
             </div>`;
     chatArea.insertAdjacentHTML("beforeend", scrollContainerHTML);
 
