@@ -1,4 +1,5 @@
-# backend/services/gemini_service.py
+# backend/services/gemini_service.
+
 import os
 import google.generativeai as genai
 
@@ -8,20 +9,27 @@ if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY tidak ditemukan di environment. Harap set di file .env")
 
 genai.configure(api_key=GEMINI_API_KEY)
-
-# Inisialisasi model Gemini Pro
 model = genai.GenerativeModel('gemini-2.5-flash-lite')
 
-def get_gemini_response(prompt: str) -> str:
+chat_sessions = {}
+
+def get_gemini_response_stream(session_id: str, prompt: str):
     """
-    Fungsi ini mengambil prompt string dan mengembalikan
-    respons teks dari model Gemini.
-    Ini adalah implementasi dasar, bisa dikembangkan untuk streaming, dll.
+    FUNGSI BARU (Generator)
+    Alasan: Fungsi ini mengelola riwayat chat dan mengembalikan respons
+    secara streaming menggunakan 'yield' untuk setiap potongan teks.
     """
     try:
-        # Di sini Anda bisa menambahkan konteks, history chat, dll.
-        response = model.generate_content(prompt)
-        return response.text
+        if session_id not in chat_sessions:
+            chat_sessions[session_id] = model.start_chat(history=[])
+
+        chat = chat_sessions[session_id]
+        response_stream = chat.send_message(prompt, stream=True)
+
+        for chunk in response_stream:
+            if hasattr(chunk, 'text'):
+                yield chunk.text
+
     except Exception as e:
         print(f"Error saat berkomunikasi dengan Gemini: {e}")
-        return "Maaf, terjadi masalah saat mencoba mendapatkan respons dari AI."
+        yield "Maaf, terjadi masalah saat mencoba mendapatkan respons dari AI."
