@@ -1,41 +1,43 @@
 # backend/app.py
+
 import os
+from uuid import uuid4
 from dotenv import load_dotenv
-# Muat environment variables dari file .env
 load_dotenv()
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
-from services.gemini_service import get_gemini_response
+from services.gemini_service import get_gemini_response_stream
 
 app = Flask(__name__)
-# Mengizinkan request dari frontend (localhost:port_frontend)
-CORS(app)
+CORS(app, expose_headers=['X-Session-Id'])
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
     """
-    Endpoint untuk menerima prompt dari user,
-    mengirimkannya ke Gemini, dan mengembalikan respons.
+    Endpoint ini sekarang mendukung streaming dan multi-turn.
     """
     try:
         data = request.json
         prompt = data.get('prompt')
 
+        session_id = data.get('session_id') or str(uuid4())
+
         if not prompt:
             return jsonify({"error": "Prompt tidak boleh kosong"}), 400
 
-        # Panggil service Gemini untuk mendapatkan respons
-        # Logika kompleks ada di gemini_service.py (SRP)
-        response_text = get_gemini_response(prompt)
+        def generate():
+            stream = get_gemini_response_stream(session_id, prompt)
+            for chunk in stream:
+                yield chunk
 
-        return jsonify({"response": response_text})
+        response = Response(generate(), mimetype='text/plain')
+        response.headers['X-Session-Id'] = session_id
+        return response
 
     except Exception as e:
-        # Penanganan error yang baik
         print(f"Error pada endpoint /api/chat: {e}")
         return jsonify({"error": "Terjadi kesalahan pada server"}), 500
 
 if __name__ == '__main__':
-    # Ambil port dari environment variable atau default ke 5000
     port = int(os.environ.get('PORT', 5000))
     app.run(debug=True, port=port)
