@@ -3,7 +3,6 @@
 import os
 import google.generativeai as genai
 
-# Konfigurasi Gemini API Key dari environment variable
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY tidak ditemukan di environment. Harap set di file .env")
