@@ -1,4 +1,4 @@
-/* chat_style.css (Versi Final Diperbarui) */
+/* chat_style.css */
 
 /* --- TRANSFORMASI UI SAAT CHAT AKTIF --- */
 
@@ -138,7 +138,6 @@ body.chat-active #buat-tinggi {
 }
 
 /* --- GAYA UNTUK MARKDOWN & HIGHLIGHT.JS --- */
-
 .prose {
   max-width: 100% !important;
 }
