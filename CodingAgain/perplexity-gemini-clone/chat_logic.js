@@ -1,8 +1,7 @@
-// chat_logic.js (Versi Final Diperbarui)
+// chat_logic.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  // --- SELEKTOR ELEMEN STABIL ---
-  // Kita gunakan selektor yang lebih spesifik berdasarkan struktur asli
+  // selektor yang lebih spesifik berdasarkan struktur asli
   const chatInputArea = document.getElementById("ask-input");
   const submitButton = document.getElementById("chat-submit-button");
   const mainInputContainer = document.getElementById("main-input-container");
@@ -10,13 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Elemen-elemen ini adalah bagian dari welcome screen yang akan disembunyikan
   const welcomeLogo = document.querySelector(".static.w-full.grow .mb-lg.bottom-0");
   const welcomeActions = document.querySelector(".static.w-full.grow .relative.w-full .mt-lg.absolute");
-
   const scrollableContainer = document.querySelector(".scrollable-container");
 
   if (!mainInputContainer || !chatInputArea || !submitButton || !welcomeLogo || !welcomeActions) {
     console.error("Satu atau lebih elemen penting tidak ditemukan. Struktur HTML mungkin berubah.");
     return;
   }
+
+  // Variabel untuk menyimpan sesi chat
+  // Alasan: Untuk melacak sesi percakapan saat ini di sisi klien.
+  let currentSessionId = null;
 
   // --- SVG & KONTEN DINAMIS ---
   const voiceIconSVG = submitButton.innerHTML;
@@ -45,18 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
     chatInputArea.innerHTML = "";
     updateSubmitButtonIcon();
 
-    // Fokus ke pertanyaan user yang baru dikirim
     userMessageEl.scrollIntoView({ behavior: "smooth", block: "center" });
 
     const aiMessageElement = appendAiMessageLoading(chatContainer);
     aiMessageElement.scrollIntoView({ behavior: "smooth", block: "center" });
 
-    try {
-      const responseText = await getAiResponse(prompt);
-      updateAiMessage(aiMessageElement, responseText);
-    } catch (error) {
-      updateAiMessage(aiMessageElement, "Maaf, terjadi kesalahan saat menghubungi AI.");
-    }
+    await streamAiResponse(prompt, aiMessageElement);
   };
 
   const transformUiForChat = () => {
@@ -68,8 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     welcomeActions.classList.add("welcome-actions");
 
     document.body.classList.add("chat-active");
-
-    // Tambahkan tombol scroll setelah chat aktif
     addScrollButtons();
   };
 
@@ -103,8 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return messageEl;
   };
 
-  const updateAiMessage = (element, markdownText) => {
-    const html = marked.parse(markdownText);
+  const finalizeAiMessage = (element, fullText) => {
+    const html = marked.parse(fullText);
     element.querySelector(".message-content").innerHTML = `<div class="prose">${html}</div>`;
     element.querySelectorAll("pre code").forEach(hljs.highlightElement);
   };
@@ -145,16 +139,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // --- KONEKSI KE BACKEND ---
-  const getAiResponse = async (prompt) => {
-    const response = await fetch("http://127.0.0.1:5000/api/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }),
-    });
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    const data = await response.json();
-    return data.response;
+  // --- PENAMBAHAN: Fungsi baru untuk menangani streaming dari backend ---
+  const streamAiResponse = async (prompt, aiMessageElement) => {
+    try {
+      const response = await fetch("http://127.0.0.1:5000/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        // Kirim prompt DAN session_id saat ini ke backend
+        body: JSON.stringify({ prompt, session_id: currentSessionId }),
+      });
+
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+      // --- PENAMBAHAN: Simpan session_id dari header ---
+      // Alasan: Menyimpan ID sesi yang dikembalikan server untuk permintaan selanjutnya.
+      const sessionIdFromHeader = response.headers.get("X-Session-Id");
+      if (sessionIdFromHeader) {
+        currentSessionId = sessionIdFromHeader;
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let fullResponseText = "";
+      const contentDiv = aiMessageElement.querySelector(".message-content");
+
+      // Siapkan container kosong untuk teks yang akan datang
+      contentDiv.innerHTML = '<div class="prose" style="white-space: pre-wrap;"></div>';
+      const proseDiv = contentDiv.querySelector(".prose");
+
+      // Loop untuk membaca stream
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break; // Keluar dari loop jika stream selesai
+
+        const chunk = decoder.decode(value, { stream: true });
+        fullResponseText += chunk;
+        // Langsung tampilkan teks mentah ke layar
+        proseDiv.innerText = fullResponseText;
+
+        // Auto-scroll ke pesan terbaru
+        const scrollContainer = document.querySelector(".scrollable-container");
+        scrollContainer.scrollTop = scrollContainer.scrollHeight;
+      }
+
+      // Setelah stream selesai, proses Markdown
+      finalizeAiMessage(aiMessageElement, fullResponseText);
+    } catch (error) {
+      console.error("Streaming error:", error);
+      finalizeAiMessage(aiMessageElement, "Maaf, terjadi kesalahan saat mengambil respons dari AI.");
+    }
   };
 
   // --- INISIALISASI EVENT LISTENERS ---
