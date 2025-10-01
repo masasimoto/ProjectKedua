@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const welcomeLogo = document.querySelector(".static.w-full.grow .mb-lg.bottom-0");
   const welcomeActions = document.querySelector(".static.w-full.grow .relative.w-full .mt-lg.absolute");
   const scrollableContainer = document.querySelector(".scrollable-container");
+  const placeholder = document.querySelector('[aria-hidden="true"]');
 
-  if (!mainInputContainer || !chatInputArea || !submitButton || !welcomeLogo || !welcomeActions) {
+  if (!mainInputContainer || !chatInputArea || !submitButton || !welcomeLogo || !welcomeActions || !placeholder) {
     console.error("Satu atau lebih elemen penting tidak ditemukan. Struktur HTML mungkin berubah.");
     return;
   }
@@ -183,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let fullResponseText = "";
       const contentDiv = aiMessageElement.querySelector(".message-content");
 
-      contentDiv.innerHTML = '<div class="prose" style="white-space: pre-wrap;"></div>';
+      contentDiv.innerHTML = '<div class="prose"></div>';
       const proseDiv = contentDiv.querySelector(".prose");
 
       while (true) {
@@ -294,7 +295,13 @@ document.addEventListener("DOMContentLoaded", () => {
       header.appendChild(langSpan);
       header.appendChild(actionsDiv);
 
-      preElement.parentNode.insertBefore(header, preElement);
+      const container = document.createElement("div");
+      container.className = "code-container";
+
+      preElement.parentNode.insertBefore(container, preElement);
+
+      container.appendChild(header);
+      container.appendChild(preElement);
     });
   };
 
@@ -363,7 +370,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mainInputContainer.addEventListener("submit", handleChatSubmit);
   submitButton.addEventListener("click", handleChatSubmit);
-  chatInputArea.addEventListener("input", updateSubmitButtonIcon);
+  chatInputArea.addEventListener("input", () => {
+    updateSubmitButtonIcon();
+    const hasText = chatInputArea.innerText.trim().length > 0;
+
+    if (placeholder) {
+      placeholder.style.display = hasText ? "none" : "block";
+    }
+  });
+
   chatInputArea.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
