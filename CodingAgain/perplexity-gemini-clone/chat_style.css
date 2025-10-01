@@ -1,5 +1,41 @@
 /* chat_style.css */
 
+/* --- Definisi Font Lokal --- */
+@font-face {
+  font-family: "fkGroteskNeue";
+  /* Menggunakan nama file persis dari upload */
+  src: url("./font/FKGroteskNeueTrial-Regular-BF6576818c3af74.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono NL";
+  /* Menggunakan nama file persis dari upload */
+  src: url("./font/JetBrainsMonoNL-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* One Dark Pro Theme Colors */
+  --pro-background: #282c34;
+  --pro-foreground: #abb2bf;
+  --pro-comment: #5c6370;
+  --pro-red: #e06c75;
+  --pro-orange: #d19a66;
+  --pro-yellow: #e5c07b;
+  --pro-green: #98c379;
+  --pro-cyan: #56b6c2;
+  --pro-blue: #61afef;
+  --pro-purple: #c678dd;
+  --pro-border: #3b4048;
+}
+
+body {
+  font-family: "fkGroteskNeue", sans-serif;
+}
+
 body.chat-active .welcome-logo,
 body.chat-active .welcome-actions {
   display: none;
@@ -80,6 +116,7 @@ body.chat-active #buat-tinggi {
 
 .message-content {
   max-width: 100%;
+  width: 100%;
 }
 
 .user-prompt-text {
@@ -148,38 +185,35 @@ body.chat-active #buat-tinggi {
 
 .prose {
   max-width: 100% !important;
+  color: var(--pro-foreground); /* Default text color for prose */
 }
 
-pre code.hljs {
-  text-wrap: auto;
-  border: 1px solid #13343b;
-  border-radius: 5px;
-}
+/* --- Enhanced Code Block Styling --- */
 
-.prose code:not(pre *) {
-  color: #1fb8cd;
-  background: transparent;
-  border: 0.2px solid #13343b;
+/* Container for both header and pre */
+.code-container {
+  border: 1px solid var(--pro-border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1.5rem;
 }
 
 .code-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2d3748;
-  color: #e2e8f0;
-  padding: 0.5rem 1rem;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border: 1px solid #13343b;
-  border-bottom: none;
-  margin-top: 1rem;
+  background-color: #3a404a; /* Slightly lighter than code bg */
+  color: var(--pro-foreground);
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--pro-border);
 }
 
 .code-language {
-  font-family: var(--font-berkeley-mono), ui-monospace, SFMono-Regular, monospace;
+  font-family: "JetBrains Mono NL", monospace;
   font-size: 0.9em;
   text-transform: capitalize;
+  font-weight: 500;
+  color: var(--pro-cyan);
 }
 
 .code-actions {
@@ -190,15 +224,16 @@ pre code.hljs {
 .code-actions button {
   background: none;
   border: none;
-  color: #a0aec0;
+  color: var(--pro-foreground);
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.35rem;
   font-size: 0.85em;
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  font-family: "fkGroteskNeue", sans-serif;
 }
 
 .code-actions button:hover {
@@ -206,6 +241,93 @@ pre code.hljs {
   color: #ffffff;
 }
 
+.code-actions button svg {
+  fill: currentColor;
+}
+
+/* Styling for <pre> and <code> */
+pre {
+  margin: 0 !important; /* Remove default margins */
+  border: none !important; /* Remove original border */
+  border-radius: 0 !important; /* Remove original radius */
+}
+
+pre code.hljs {
+  padding: 1rem !important;
+  font-family: "JetBrains Mono NL", monospace;
+  font-size: 0.95em;
+  line-height: 1.6;
+  text-wrap: balance;
+  background-color: var(--pro-background) !important;
+  color: var(--pro-foreground);
+}
+
+/* Inline code styling */
+.prose code:not(pre *) {
+  color: var(--pro-cyan);
+  background: #2c313a;
+  border: 1px solid var(--pro-border);
+  font-family: "JetBrains Mono NL", monospace;
+  padding: 0.15em 0.3em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* One Dark Pro Syntax Highlighting */
+.hljs-comment,
+.hljs-quote {
+  color: var(--pro-comment);
+  font-style: italic;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: var(--pro-red);
+}
+
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: var(--pro-orange);
+}
+
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: var(--pro-green);
+}
+
+.hljs-title,
+.hljs-section {
+  color: var(--pro-blue);
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+  color: var(--pro-purple);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+/* --- End Code Block Styling --- */
+
+/* --- Message Toolbar & Editing --- */
 .message-bubble {
   position: relative;
   padding-bottom: 10px;
